@@ -80,13 +80,13 @@ if(isset($_POST['login']))
           <!-- Navbar items -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../index.html">
+              <a class="nav-link nav-link-icon" href="../index.php">
                 <i class="ni ni-planet"></i>
                 <span class="nav-link-inner--text">Home</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="register.html">
+              <a class="nav-link nav-link-icon" href="register.php">
                 <i class="ni ni-circle-08"></i>
                 <span class="nav-link-inner--text">Register</span>
               </a>
@@ -162,7 +162,7 @@ if(isset($_POST['login']))
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              © 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Convocare</a>
+              © 2019 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Convocare</a>
             </div>
           </div>
         </div>
