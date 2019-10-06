@@ -1,27 +1,43 @@
-<!--
+<?php
+if(isset($_POST['login']))
+    {   
+        session_start();
+        $email=$_POST['email'];
+        $password=$_POST['password'];
 
-=========================================================
-* Argon Dashboard - v1.1.0
-=========================================================
+        $connection=mysqli_connect('localhost', 'root', '', 'prsnlcnl');
+       $query="SELECT role from user where email='$email' and Password='$password'";
+       $query_id="SELECT id from user where email='$email' and Password='$password'";
+       $result_role=mysqli_query($connection,$query);
+       $result_id=mysqli_query($connection,$query_id);
+       $data=mysqli_fetch_row($result_role);
+       $id_data=mysqli_fetch_assoc($result_id);   
+       $id=$id_data['id'];
+       $_SESSION['id']=$id;
+       if($data[0]==1)
+       {
+           header('Location:admin.php');
+       }
+       if($data[0]==2)
+       {
+           header('Location:counsellor.php');
+       }
+       if($data[0]==3)
+       {
+           header('Location:user.php');
+       }
+    }
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+?>
 
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>
-      Signup
-  </title>
+  <title>Login</title>  
   <!-- Favicon -->
   <link rel="shortcut icon" href="C:\xampp\htdocs\personal-counselling\images\w.png">
   <!-- Fonts -->
@@ -38,9 +54,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-          <a class="navbar-brand" href="../index.html">
-            <h1>CONVOCARE</h1>
-          </a>
+        <a class="navbar-brand" href="../index.html">
+          <h1>CONVOCARE</h1>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,9 +86,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="login.html">
+              <a class="nav-link nav-link-icon" href="register.html">
                 <i class="ni ni-circle-08"></i>
-                <span class="nav-link-inner--text">Login</span>
+                <span class="nav-link-inner--text">Register</span>
               </a>
             </li>
           </ul>
@@ -85,7 +101,8 @@
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6">
-              <p class="text-lead text-light">Register today to start your couselling sessions</p>
+              <h1 class="text-white">Welcome!</h1>
+              <p class="text-lead text-light">Login to start our tests!!</p>
             </div>
           </div>
         </div>
@@ -98,29 +115,24 @@
     </div>
     <!-- Page content -->
     <div class="container mt--8 pb-5">
-      <!-- Table -->
       <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
+        <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary shadow border-0">
+            <div class="card-header bg-transparent pb-5">
+              <div class="btn-wrapper text-center">
+             </div>
+            </div>
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>Sign up with credentials</small>
+                <small>sign in with credentials</small>
               </div>
-              <form role="form">
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Name" type="text">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
+              <form action="" method="POST" role="form">
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" name="email" placeholder="Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -128,41 +140,37 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
-                  </div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-12">
-                    <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                      <label class="custom-control-label" for="customCheckRegister">
-                        <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
-                      </label>
-                    </div>
+                    <input class="form-control" name="password" placeholder="Password" type="password">
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" name="regester" class="btn btn-primary mt-4">Create account</button>
+                  <button type="submit" name="login" class="btn btn-primary my-4">LogIn</button>
                 </div>
               </form>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              <a href="#" class="text-light"><small>Forgot password?</small></a>
+            </div>
+            <div class="col-6 text-right">
+              <a href="#" class="text-light"><small>Create new account</small></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Footer -->
-  <footer class="py-5">
-    <div class="container">
-      <div class="row align-items-center justify-content-xl-between">
-        <div class="col-xl-6">
-          <div class="copyright text-center text-xl-left text-muted">
-            &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Convocare</a>
+    <footer class="py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              © 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Convocare</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
   <!--   Core   -->
   <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>

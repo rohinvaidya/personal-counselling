@@ -1,18 +1,37 @@
-<!--
+<?php
+if (isset($_POST['register'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
+    $phone=$_POST['phone'];
+    $choice=$_POST['choice'];
 
-=========================================================
-* Argon Dashboard - v1.1.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+    $connection = mysqli_connect('localhost', 'shalva', 'Shalva03', 'gouri');
+    if($connection)
+    {
+        echo "database online"."<br>";
+    }
+    else 
+    {
+        die("database not online");
+    }
 
-* Coded by Creative Tim
+    $query_buyer= "INSERT INTO user(email,password,first_name,last_name,phone,role) VALUES('$email','$password','$firstname','$lastname','$phone','$choice')";
+    $result = mysqli_query($connection,$query_buyer);
 
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+    if ($result) 
+    {
+        echo "Successfully inserted into database" . "<br>";
+    } 
+    else 
+    {
+        die("Unsuccessful" . mysqli_error($connection));
+    }
+ 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
