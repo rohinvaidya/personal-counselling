@@ -1,664 +1,659 @@
-<!--
-
-=========================================================
-* Argon Dashboard - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!--META TAGS-->
+        <meta charset="utf-8">
+        
+        <meta name="description" content="Building modern responsive website using HTML5, CSS3 and Bootstrap!">
+        <meta name="keywords" content="HTML5, CSS3, jQuery, Responsive, Website, Bootstrap">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <!--END OF META TAGS-->
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
-  </title>
-  <!-- Favicon -->
-  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <!-- Icons -->
-  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
-</head>
+        <!--Style CSS-->
+        <style>
+        div.Bottom1
+        {
+            position: absolute;
+            top: 100%;
+            left:40%;
+            color: black;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        div.Bottom2
+        {
+            position: absolute;
+            top: 100%;
+            left:30%;
+            color: black;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        div.Bottom3
+        {
+            position: absolute;
+            top: 100%;
+            left:35%;
+            color: black;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        div.Bottom4
+        {
+            position: absolute;
+            top: 100%;
+            left:20%;
+            color: black;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        
+        </style>
+        <!--Title goes here-->
+        <title>Convocare</title>
+        
+        <!--Resource Linking--> 
+        
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="images/w.png">
+        
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+        
+        
+        <!--ANIMATE-->
+        <link rel="stylesheet" href="plugin/animate/animate.css">
+        
+        <!--FONTAWESOME-->
+        <link rel="stylesheet" href="plugin/font-awesome-4.7.0/css/font-awesome.min.css">
+        
+        <!--MAGNIFIC-POPUP-->
+        <link rel="stylesheet" href="plugin/magnific-popup/magnific-popup.css">
+        
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css">
+        
+        
+        <!--OWL_CAROUSEL-->
+        <link rel="stylesheet" href="plugin/owl-carousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="plugin/owl-carousel/assets/owl.theme.blue.css">
+        
+        <!--OUR CSS-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/custom.css">
+        
+    </head>
+    
+    <body data-spy="scroll" data-target="wg-menu" data-offset="70">
+       
+        <!--HEADER SECTION-->       
+        <header>
+            <nav class="navbar navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="wg-nav-wrapper">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wg-menu">
+                                <span class="sr-only">Toggle Navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="#home" class="navbar-brand">CONVOCARE</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="wg-menu">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#home" class="smooth-scroll">Home</a></li>
+                                <li><a href="#services" class="smooth-scroll">Services</a></li>
+                                <li><a href="#about" class="smooth-scroll">About</a></li>
+                                <li><a href="#work" class="smooth-scroll">Work</a></li>
+                                <li><a href="#team" class="smooth-scroll">Team</a></li>
+                                <li><a href="#testimonial" class="smooth-scroll">Testimonial</a></li>
+                                <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
+                                <li><a href="#stats" class="smooth-scroll">Stats</a></li>
+                                <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--END OF HEADER SECTION-->       
+       
+        <!--HOME SECTION-->
+        <section id="home">
+            <div class="home-cover animated fadeIn bg-parallax">
+                <div class="home-content-box">
+                    <div class="home-content-box-inner">
+                        <div class="home-heading wow animated zoomIn">
+                            <h2>A Touch Of Care</h2>
+                        </div><!--.home-heading-->
+                        <div class="home-btn wow animated zoomIn">
+                            <a href="#work" class="btn btn-lg btn-general btn-white smooth-scroll" role="button" title="view Our Work">View our work</a>
+                        </div>
+                    </div><!--.home-content-box-inner-->
+                </div><!--.home-content-box-->
+            </div><!--home-cover-->
+        </section>
+        <!--END OF HOME-->
+        
+        
+        <!--SERVICES SECTION-->
+        <section id="services">
+            <div class="content-box">
+                <div class="content-title wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                    <h3>Services</h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container">
+                    <div class="row wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <div class="service-item-icon">
+                                    <i class="fa fa-book fa-3x" ></i>
+                                </div>
+                                <div class="service-item-title">
+                                    <h3>Personality Test</h3>
+                                </div>
+                                <div class="service-item-desc">
+                                    <p>Personality tests help measure how well you will perform at the organization based on your interpersonal skills,the motivation and inspiration that drive you,the role that you can excel in due to your behavioral traits.</p>
+                                </div>
+                            </div><!--.service-item-->
+                        </div><!--.col-md-4-->
 
-<body class="">
-  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-    <div class="container-fluid">
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Brand -->
-      <a class="navbar-brand pt-0" href="./index.html">
-        <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-      </a>
-      <!-- User -->
-      <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ni ni-bell-55"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="./assets/img/theme/team-1-800x800.jpg
-">
-              </span>
-            </div>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-            <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
-            </div>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-single-02"></i>
-              <span>My profile</span>
-            </a>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-settings-gear-65"></i>
-              <span>Settings</span>
-            </a>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
-              <i class="ni ni-user-run"></i>
-              <span>Logout</span>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-        <!-- Collapse header -->
-        <div class="navbar-collapse-header d-md-none">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="./index.html">
-                <img src="./assets/img/brand/blue.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-        <!-- Navigation -->
-        <ul class="navbar-nav">
-          <li class="nav-item  class=" active" ">
-          <a class=" nav-link active " href=" ./index.html"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="./examples/icons.html">
-              <i class="ni ni-planet text-blue"></i> Icons
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="./examples/maps.html">
-              <i class="ni ni-pin-3 text-orange"></i> Maps
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Tables
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/login.html">
-              <i class="ni ni-key-25 text-info"></i> Login
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/register.html">
-              <i class="ni ni-circle-08 text-pink"></i> Register
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Documentation</h6>
-        <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-              <i class="ni ni-spaceship"></i> Getting started
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-              <i class="ni ni-palette"></i> Foundation
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-              <i class="ni ni-ui-04"></i> Components
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="main-content">
-    <!-- Navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
-        <!-- Form -->
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input class="form-control" placeholder="Search" type="text">
-            </div>
-          </div>
-        </form>
-        <!-- User -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="./assets/img/theme/team-4-800x800.jpg">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
-                </div>
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-              <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
-              </div>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
-                <span>My profile</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
-                <span>Settings</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
-                <i class="ni ni-user-run"></i>
-                <span>Logout</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- End Navbar -->
-    <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-      <div class="container-fluid">
-        <div class="header-body">
-          <!-- Card stats -->
-          <div class="row">
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
-                      <span class="h2 font-weight-bold mb-0">350,897</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last month</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                      <span class="h2 font-weight-bold mb-0">2,356</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                        <i class="fas fa-chart-pie"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last week</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
-                      <span class="h2 font-weight-bold mb-0">924</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                        <i class="fas fa-users"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                    <span class="text-nowrap">Since yesterday</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                      <span class="h2 font-weight-bold mb-0">49,65%</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                        <i class="fas fa-percent"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                    <span class="text-nowrap">Since last month</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid mt--7">
-      <div class="row">
-        <div class="col-xl-8 mb-5 mb-xl-0">
-          <div class="card bg-gradient-default shadow">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
-                  <h2 class="text-white mb-0">Sales value</h2>
-                </div>
-                <div class="col">
-                  <ul class="nav nav-pills justify-content-end">
-                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 10, 30, 15, 40, 20, 60, 60]}]}}' data-prefix="$" data-suffix="k">
-                      <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
-                        <span class="d-none d-md-block">Month</span>
-                        <span class="d-md-none">M</span>
-                      </a>
-                    </li>
-                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
-                      <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
-                        <span class="d-none d-md-block">Week</span>
-                        <span class="d-md-none">W</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              <div class="chart">
-                <!-- Chart wrapper -->
-                <canvas id="chart-sales" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card shadow">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                  <h2 class="mb-0">Total orders</h2>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              <div class="chart">
-                <canvas id="chart-orders" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-xl-8 mb-5 mb-xl-0">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Page visits</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      /argon/
-                    </th>
-                    <td>
-                      4,569
-                    </td>
-                    <td>
-                      340
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/index.html
-                    </th>
-                    <td>
-                      3,985
-                    </td>
-                    <td>
-                      319
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/charts.html
-                    </th>
-                    <td>
-                      3,513
-                    </td>
-                    <td>
-                      294
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/tables.html
-                    </th>
-                    <td>
-                      2,050
-                    </td>
-                    <td>
-                      147
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      /argon/profile.html
-                    </th>
-                    <td>
-                      1,795
-                    </td>
-                    <td>
-                      190
-                    </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Social traffic</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      Facebook
-                    </th>
-                    <td>
-                      1,480
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">60%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Facebook
-                    </th>
-                    <td>
-                      5,480
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">70%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Google
-                    </th>
-                    <td>
-                      4,807
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">80%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Instagram
-                    </th>
-                    <td>
-                      3,678
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">75%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      twitter
-                    </th>
-                    <td>
-                      2,645
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">30%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="row align-items-center justify-content-xl-between">
-          <div class="col-xl-6">
-            <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
-            </div>
-          </div>
-          <div class="col-xl-6">
-            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
-  <!--   Core   -->
-  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <!--   Optional JS   -->
-  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
-  <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
-  <!--   Argon JS   -->
-  <script src="./assets/js/argon-dashboard.min.js?v=1.1.0"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script>
-    window.TrackJS &&
-      TrackJS.install({
-        token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "argon-dashboard-free"
-      });
-  </script>
-</body>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <div class="service-item-icon">
+                                    <i class="fa fa-user-md fa-3x" ></i>
+                                </div>
+                                <div class="service-item-title">
+                                    <h3>Personal Counsellors</h3>
+                                </div>
+                                <div class="service-item-desc">
+                                    <p>Increase self-confidence,improve relationships,achieve educational goals,and make good decisions for emotional,intellectual,physical well-being</p>
+                                </div>
+                            </div><!--.service-item-->
+                        </div><!--.col-md-4-->
 
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <div class="service-item-icon">
+                                    <i class="fa fa-comments-o fa-3x" ></i>
+                                </div>
+                                <div class="service-item-title">
+                                    <h3>24x7 Interaction</h3>
+                                </div>
+                                <div class="service-item-desc">
+                                    <p>Having a problem in life?You can Get in touch with our Counselors and seek advice any time</p>
+                                </div>
+                            </div><!--.service-item-->
+                        </div><!--.col-md-4-->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END OF SERVICES SECTION-->
+        
+        <!--ABOUT SECTION-->
+        <section id="about">
+            <!--RIGHT HAND IMAGE PART-->
+            <div class="about-bg-diagonal bg-parallax"></div>
+            
+            <!--LEFT HAND ABOUT CONTENT-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="content-box">
+                            <div class="content-box-outer">
+                                <div class="content-box-inner">
+                                    <div class="content-title wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay=".2s">
+                                        <h3>About Convocare</h3>
+                                        <div class="content-title-underline"></div>
+                                    </div>
+                                     <div class="about-desc wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay=".2s">
+                                         <p>At Convocare,we provide an online counselling and emotional support platform designed to foster mental wellness.It anonymously connects you with the right expert consisting of counselors, psychologists, psychotherapists, career guides and people with rich experience, who understand you and guide you through individual sessions.</p>
+                                     </div><!--desc.-->
+                                     <div class="about-btn">
+                                         <a href="#work" title="Our Work" class="btn btn-lg btn-general btn-blue wow animated fadeInUp smooth-scroll" data-wow-duration="0.5s" data-wow-delay=".2s">Our Work</a>
+                                     </div>   
+                                </div><!--innner box-->
+                            </div><!--outer box-->
+                        </div><!--.content-box-->
+                    </div><!--col-md-4-->
+                </div><!--row-->
+            </div><!--container-->
+        </section>
+        <!--END OF ABOUT SECTION-->
+        
+        <!--WORK SECTION-->
+        <section id="work">
+            <div class="content-box">
+                <div class="content-title wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                    <h3>Our Work</h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row no-gutters wow animate fadeInUp">
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="img-wrapper">
+                                <a href="images/work/one.jpg"><img src="images/work/one.jpg" class="img-responsive" alt="">
+                                    <div class="Bottom1">Anxiety</div>
+                                 </a>
+                            </div>
+                        </div><!--wirk1-->
+                        
+                         <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="img-wrapper">
+                                <a href="images/work/two.jpg"><img src="images/work/two.jpg" class="img-responsive" alt="">
+                                    <div class="Bottom2">Detoxification</div>
+                                </a>
+                            </div>
+                        </div><!--wirk1-->
+                        
+                         <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="img-wrapper">
+                                <a href="images/work/three.jpg"><img src="images/work/three.jpg" class="img-responsive" alt="">
+                                    <div class="Bottom3">Depression</div>
+                                </a>
+                            </div>
+                        </div><!--wirk1-->
+                        
+                         <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="img-wrapper">
+                                <a href="images/work/four.jpg"><img src="images/work/four.jpg" class="img-responsive" alt="">
+                                    <div class="Bottom4">Stress Management</div>
+                                </a>
+                            </div>
+                        </div><!--wirk1-->
+                    </div>
+                </div><!--.container-->
+            </div>
+        </section>
+        <!--END OF WORK SECTION-->
+        
+        <!--Team Section-->
+            <section id="team">
+                <div class="content-box">
+                    <div class="content-title wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                        <h3>Our team</h3>
+                        <div class="content-title-underline"></div>
+                    </div><!--Content-title-->
+                    <div class="container">
+                        <div class="row wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                            <div class="col-md-12">
+                                <div class="team-members owl-carousel owl-theme">
+                                    
+                                    <div class="team-member">
+                                        <img src="images/team/team-1.jpg" alt="Team Member 1" class="img-responsive">
+                                        <div class="team-member-info">
+                                            <h4 class="team-member-name">Daniel Watrous</h4>
+                                            <h4 class="team-member-designation">Counselling Psychologist</h4>
+                                            <ul class="social-list">
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!--team-member-info-->
+                                    </div><!--team meamber-->
+                                    
+                                    <div class="team-member">
+                                        <img src="images/team/team-2.jpg" alt="Team Member 2" class="img-responsive">
+                                        <div class="team-member-info">
+                                            <h4 class="team-member-name">Sara Smith</h4>
+                                            <h4 class="team-member-designation">Psychologist</h4>
+                                            <ul class="social-list">
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!--team-member-info-->
+                                    </div><!--team meamber-->
+                                    
+                                    <div class="team-member">
+                                        <img src="images/team/team-3.jpg" alt="Team Member 3" class="img-responsive">
+                                        <div class="team-member-info">
+                                            <h4 class="team-member-name">Steve Mike</h4>
+                                            <h4 class="team-member-designation">Clinical Psychologist</h4>
+                                            <ul class="social-list">
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!--team-member-info-->
+                                    </div><!--team meamber-->
+                                    
+                                    <div class="team-member">
+                                        <img src="images/team/team-4.jpg" alt="Team Member 4" class="img-responsive">
+                                        <div class="team-member-info">
+                                            <h4 class="team-member-name">Robert Hinay</h4>
+                                            <h4 class="team-member-designation">Counselor</h4>
+                                            <ul class="social-list">
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!--team-member-info-->
+                                    </div><!--team meamber-->
+                                    
+                                    <div class="team-member">
+                                        <img src="images/team/team-5.jpg" alt="Team Member 5" class="img-responsive">
+                                        <div class="team-member-info">
+                                            <h4 class="team-member-name">Mike Tera</h4>
+                                            <h4 class="team-member-designation">Industrial Psychologist</h4>
+                                            <ul class="social-list">
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+                                            </ul>
+                                        </div><!--team-member-info-->
+                                    </div><!--team meamber-->
+                                    
+                                </div><!--team meambers-->
+                            </div>
+                        </div><!--row-->
+                    </div><!--.container-->
+                </div><!--.content-->
+            </section>
+        <!--END OF TEAM SECTION-->
+        
+        <!--TESTIMONIAL Section-->
+        <section id="testimonial">
+            <div class="testimonial-cover bg-parallax">
+                <div class="content-box">
+                    <div class="content-title wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                        <h3 class="content-title-white">What Our Customers Say</h3>
+                        <div class="content-title-underline"></div>
+                    </div><!--Content-title-->
+                    <div class="container">
+                        <div class="row wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+                            <div class="customers-testimonials text-center owl-carousel owl-theme">
+
+                                <div class="testimonial">
+                                    <img src="images/client/client-1.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <blockquote class="text-center">
+                                        <p>I was struggling with some issues and the platform was so helpful!
+                                            The counsellors were patient and understanding!
+                                            Thank you Convovare!</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong>Danial Watrous</strong>
+                                            <span>CEO &amp; Founder - Infomatica</span>
+                                        </p>
+                                    </div>
+                                </div><!--testimonial-->
+
+                                <div class="testimonial">
+                                    <img src="images/client/client-2.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <blockquote class="text-center">
+                                        <p>Being in the It sector can be tough and Convocae have been excellent at Industrial Level Counselling which has given me a very stable workforce to work with</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong>Danial Watrous</strong>
+                                            <span>CEO &amp; Founder - Diamondeer</span>
+                                        </p>
+                                    </div>
+                                </div><!--testimonial-->
+
+                                <div class="testimonial">
+                                    <img src="images/client/client-3.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <blockquote class="text-center">
+                                        <p>Convocare has proven to be a reliable partner in helping me in most stressful of my times.</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong>Danial Watrous</strong>
+                                            <span>CFO - Adani Ltd.</span>
+                                        </p>
+                                    </div>
+                                </div><!--testimonial-->
+                            </div><!--customers-testimonials-->
+                        </div>
+                    </div><!--.container-->
+                </div><!--.content-->
+            </div><!--testimonial-cover-->
+        </section>
+        <!--END OF TESTIMONIAL SECTION-->
+        
+        <!--PRICING TABLE SECTION-->
+        <section id="pricing">
+            <div class="content-box">
+                <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <h3>OUr pricing</h3>
+                    <div class="content-title-underline"></div>
+                </div><!--Content-title-->
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <div class="pricing-box">
+                                <h4 class="pricing-title">Aptitude Test</h4>
+                                <h3 class="pricing-value">1499<sup>&#8377</sup></h3>
+                                <ul class="pricing-spec">
+                                    <li><p>Online test</p></li>
+                                    <li><p>Carreer Guidance</p></li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <div class="pricing-box pricing-box-lg">
+                                <h4 class="pricing-title">Stress Test</h4>
+                                <h3 class="pricing-value">2999<sup>&#8377</sup></h3>
+                                <ul class="pricing-spec">
+                                    <li><p>Online Test</p></li>
+                                    <li>
+                                        <p>Online counselling</p>
+                                    </li>
+                                    <li>
+                                        <p>24x7 Customer Care</p>
+                                    </li>
+                                    <li>
+                                        <p>Live Sessions</p>
+                                    </li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" role="button" class="btn btn-lg btn-general btn-white">PURCHASE</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <div class="pricing-box">
+                                <h4 class="pricing-title">IQ Test</h4>
+                                <h3 class="pricing-value">499<sup>&#8377</sup></h3>
+                                <ul class="pricing-spec">
+                                    <li><p></p></li>
+                                    <li>
+                                        <p>Online Test</p>
+                                    </li>
+                                    <li>
+                                        <p>IQ Certification</p>
+                                    </li>
+                                    <li>
+                                        <p>Appropriate Curriculum</p>
+                                    </li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!--row-->
+                </div><!--.container-->
+            </div><!--.content-->
+        </section>
+        <!--END OF PRICING TABLE SECTION-->
+        
+        <!--STATS Section-->
+        <section id="stats">
+            <div class="stats-cover bg-parralex">
+                <div class="content-box">
+                    <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <h3 class="content-title-white">We never stop improving</h3>
+                        <div class="content-title-underline"></div>
+                    </div><!--Content-title-->
+                    <div class="container">
+                        <div class="row wow animated fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.2s">
+                            
+                            <div class="col-md-3">
+                                <div class="stats-item">
+                                    <i class="fa fa-star-o fa-5x"></i>
+                                    <h2><span class="counter">6</span></h2>
+                                    <p>awards</p>
+                                </div>
+                            </div><!--cols-->
+                            
+                            <div class="col-md-3">
+                                <div class="stats-item">
+                                    <i class="fa fa-heart-o fa-5x"></i>
+                                    <h2><span class="counter">1590</span>+</h2>
+                                    <p>likes</p>
+                                </div>
+                            </div><!--cols-->
+                            
+                            <div class="col-md-3">
+                                <div class="stats-item">
+                                    <i class="fa fa-check fa-5x"></i>
+                                    <h2><span class="counter">1097</span>+</h2>
+                                    <p>recommended</p>
+                                </div>
+                            </div><!--cols-->
+
+                            <div class="col-md-3">
+                                <div class="stats-item">
+                                    <i class="fa fa-user-circle-o fa-5x"></i>
+                                    <h2><span class="counter">1980</span>+</h2>
+                                    <p>Users</p>
+                                </div>
+                            </div><!--cols-->
+                            
+                        </div><!--row-->
+                    </div><!--.container-->
+                </div><!--.content-->
+            </div>
+        </section>
+        <!--END OF  SECTION--> 
+        
+        <!--FOOTER-->
+        <footer id="contact">
+            <div class="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-left">
+                                <h3>CONVOCARE</h3>
+                                <P>We at <b>Convocare</b>believe that Councilling is not just our work but, a <b>Social Responsibility</b>to help our fellow brothers live better</P>
+                                <div class="contact-info">
+                                    <address>
+                                        <strong>Headquaters:</strong> 
+                                        <p>313, Evergreen CHS. <br>Airoli Sector 15, <br>New Bombay, <br>Mumbai - 55.</p>
+                                    </address>
+                                
+                                    <div class="phone-fax-email">
+                                        <p>
+                                            <strong>Phone:</strong> <span>(719)-778-8804</span>
+                                            <br>
+                                            <strong>Fax:</strong> <span>(719)-778-8804</span>
+                                            <br>
+                                            <strong>Email:</strong> <span>info@Concocare.in</span>
+                                            <br>
+                                        </p>
+                                    </div><!--phone-fax-email-->
+                                </div><!--.contact-info-->
+                                
+                                <ul class="social-list">
+                                <li class="social-icon"><a href="" class="icon-white"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social-icon"><a href="" class="icon-white"><i class="fa fa-twitter"></i></a></li>
+                                <li class="social-icon"><a href="" class="icon-white"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="social-icon"><a href="" class="icon-white"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                            </div><!--contact-left-->
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="contact-right">
+                                <h3>Contact Us</h3>
+                                <form action="">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <textarea rows="3" class="form-control" placeholder="Your Message..."></textarea>
+                                    <div class="send-btn">
+                                        <a href="#" class="btn btn-lg btn-general btn-white" role="button">Send</a>
+                                    </div>
+                                </form>
+                            </div><!--contact-right-->
+                        </div>
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--contact-->
+            
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-copyrights">
+                                <p>Copyright &copy; 2018 All rights reserved by Concocare Consultancy Ltd.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="footer-menu hidden-xs">
+                                <ul>
+                                    <li><a href="#home">Home</a>|</li>
+                                    <li><a href="#services">Services</a>|</li>
+                                    <li><a href="#about">About</a>|</li>
+                                    <li><a href="#work">Work</a>|</li>
+                                    <li><a href="#team">Team</a>|</li>
+                                    <li><a href="#testimonial">Testimonial</a>|</li>
+                                    <li><a href="#pricing">Pricing</a>|</li>
+                                    <li><a href="#stats">Stats</a></li>
+                                </ul>
+                            </div><!--footer-menu-->
+                        </div>
+                    </div>
+                </div><!--container-->
+            </div><!--footer-bottom-->
+            <a href="#home" class="btn btn-sm btn-general btn-blue btn-back-to-top smooth-scroll" role="button" title="home"><i class="fa fa-angle-up"></i></a>
+        </footer>
+        <!--FOOTER-->
+        
+        
+        <!--SCRIPTS-->
+        <!--jQUERY SCRIPT-->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        
+        <script src="plugin/easing/easing.min.js"></script>
+        
+        <!--BOOTSTRAP SCRIPT-->
+        <script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+        
+        <!--MAGNIFIC POPUP SCRIPT-->
+        <script src="plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+        
+        <!--WOW SCRIPT-->
+        <script src="plugin/wow/wow.min.js"></script>
+        
+        <!--OWL-CAROUSEL SCRIPT-->
+        <script src="plugin/owl-carousel/owl.carousel.min.js"></script>
+        
+        <!--waypoint SCRIPT-->
+        <script src="plugin/waypoint/jquery.waypoints.min.js"></script>
+        
+        <!--OWL-CAROUSEL SCRIPT-->
+        <script src="plugin/counter-up/jquery.counterup.js"></script>
+        
+        <!--OUR SCRIPT-->
+        <script src="js/script.js"></script>
+    </body>
 </html>
