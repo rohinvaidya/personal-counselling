@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>x</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+    <style> 
+    .test1_form
+    {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom:50px; 
+    }
+    #Submit_btn
+    {
+        margin-left: 50%;
+    }
+    form
+    {
+        
+    }
+    
+    </style>
+
+    <!--CDN for bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--I have kept this navbar so you could replace this with the one we have-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <a class="navbar-brand" href="#">Hidden brand</a>
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                </div>
+              </nav>
+        
+        <div class="alert alert-danger" role="alert">
+                Please limit your Answers to 190 letters only
+         </div>
+             <div class="test1_form ">
+                <form  action="login_check.php" method="POST">
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">1. What are the symptoms you have been experiencing?</label>
+                                <textarea name="quest_1" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">2. Do you have any medical condition/s? If yes, what are they?</label>
+                                <textarea name="quest_2" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">3. How long have you been experiencing these symptoms for?</label>
+                                <textarea name="quest_3" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">4. Do you remember a significant event that occurred right before your symptoms?</label>
+                                <textarea name="quest_4" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">5. Have your symptoms interfered with your ability to carry out your daily routine? If yes, in what way?</label>
+                                <textarea name="quest_5" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">6. Have these symptoms cause personal distressed to you? In what way?</label>
+                                <textarea name="quest_6" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">7. How frequently do you experience these symptoms?</label>
+                                <textarea name="quest_7" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">8. Have any of your family members experienced similar symptoms? If yes, did they seek any therapeutic help for it?</label>
+                                <textarea name="quest_8" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">9. Do you engage in any kind of substance abuse? If yes, what kind?</label>
+                                <textarea name="quest_9" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlTextarea1">10. Have you sought therapeutic help for these symptoms before?</label>
+                                <textarea name="quest_10" maxlength="191" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="Submit_btn" type="submit" name="submit">Submit</button>
+
+                </form>
+            </div>
+
+</body>
+</html>
