@@ -116,6 +116,7 @@
                                 <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
                                 <li><a href="#stats" class="smooth-scroll">Stats</a></li>
                                 <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+                                <li><a href="pages/login.php">Login/Register</a></li>
                              </ul>
                         </div>
                     </div>
