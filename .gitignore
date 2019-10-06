@@ -1,1 +1,5 @@
 .DS_Store
+.idea
+CHANGELOG.md
+ISSUE_TEMPLATE.md
+README.md
