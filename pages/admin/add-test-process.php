@@ -12,14 +12,14 @@ include('../../includes/db.php');
 
 if (isset($_POST['submit'])){
 
-    $query = "INSERT INTO test(test_name,is_active)
-        VALUES('".$_POST['name']."','counsellor')";
+    $name=$_POST['name'];
+    $query = "INSERT INTO test(test_name,is_active)VALUES('$name',0)";
 
 
     if (mysqli_query($dbc, $query)) {
         //echo "New record created successfully";
         header("Location: add-test.php");
     } else
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $query . "<br>" . mysqli_error($dcb);
 }
 
