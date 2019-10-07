@@ -281,22 +281,22 @@
             <div class="card-body">
                 <h2 class="card-title">Add Test<hr></h2>
 <!--                MAIN FORM-->
-                <form action="add_college_processing.php" method="POST">
+                <form action="add-test-process.php" method="POST">
 
-<!--                    NAME OF COLLEGE-->
+<!--                    NAME OF TEST-->
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Name of Test">
                             </div>
                         </div>
                     </div>
-<!--                    END OF NAME OF COLLEGE-->
+<!--                    END OF NAME OF Test-->
 <!---->
                     <div class="row">
-                        <div class="col-md-4 center" >
+                        <div class="col-md-4" >
                             <div class="form-group">
-                                <input type="submit" class="form-control btn btn-primary" id="name" name="submit" value="Add Test" >
+                                <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Add Test" >
                             </div>
                         </div>
                     </div>
