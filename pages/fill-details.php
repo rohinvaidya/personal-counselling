@@ -20,17 +20,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Add Counsellor
+        Update Your Profile
     </title>
     <!-- Favicon -->
-    <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
-    <link href="../../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-    <link href="../../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+    <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- CSS Files -->
-    <link href="../../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+    <link href="../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -41,8 +41,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="../../index.html">
-            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <a class="navbar-brand pt-0" href="../index.html">
+            <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -61,7 +61,7 @@
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg
+                <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg
 ">
               </span>
                     </div>
@@ -100,8 +100,8 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="../../index.html">
-                            <img src="../../assets/img/brand/blue.png">
+                        <a href="../index.html">
+                            <img src="../assets/img/brand/blue.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -186,7 +186,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../profile.html">
+                    <a class="nav-link " href="profile.html">
                         <i class="ni ni-single-02 text-yellow"></i> User profile
                     </a>
                 </li>
@@ -210,7 +210,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="add-counsellors.php">Add Counsellor</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="#">Update Your Profile</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -228,7 +228,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
+                  <img alt="Image placeholder" src="../assets/img/theme/team-4-800x800.jpg">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
@@ -239,19 +239,19 @@
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome!</h6>
                         </div>
-                        <a href="../../examples/profile.html" class="dropdown-item">
+                        <a href="../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-single-02"></i>
                             <span>My profile</span>
                         </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
+                        <a href="../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-settings-gear-65"></i>
                             <span>Settings</span>
                         </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
+                        <a href="../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-calendar-grid-58"></i>
                             <span>Activity</span>
                         </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
+                        <a href="../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-support-16"></i>
                             <span>Support</span>
                         </a>
@@ -279,24 +279,77 @@
         <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">Add Counsellor<hr></h2>
-                <form action="process-counsellor.php" method="POST">
-                    <div class="form-group">
-                        <label for="email" class="col-sm-2 col-form-label">Email</label>
-                        <input type="email" class= "form-control" name="email" id="email">
+                <h2 class="card-title">Update Your Profile<hr></h2>
+            <!--MAIN FORM-->
+                <form action="details.php" method="POST" enctype="multipart/form-data">
+                <!--INPUT IMAGE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="image">Profile Picture (optional)</label>
+                                <div class="input-group input-file" id="image">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><input type="file" class="form-control-file" name= "profilepicpath" value="Choose"/></button>
+                                </span>
+                            </div>
+                        </div>
+                        </div>
                     </div>
+                <!--END OF INPUT IMAGE-->
+                <!--NAME-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-alternative" required name="first_name" id="first_name" placeholder="Enter Your First Name">
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                        <input type="password" class= "form-control" name="password" id="password">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-alternative" required name="last_name" id="last_name" placeholder="Enter Your Last Name">
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-primary" value="submit">Add Counsellor</button>
-                    </div>            
+                <!--END OF NAME-->
+                <!--CONTACT NUMBER-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" pattern="^[789]\d{9}$" name="contact_no" class="form-control form-control-alternative" required id="contact_no" 
+                                placeholder="Contact Number" data-container="body" data-toggle="popover" data-placement="right" 
+                                data-content="Please enter only 10 digit phone numbers." />
+                            </div>
+                        </div>
+                    </div>
+                <!--END OF CONTACT NUMBER-->
+                <!--EMAILID-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-alternative" required id="email" name="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                    </div>
+                <!--END OF EMAIL-ID-->
+                <!--PASSWORD-->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-alternative" required name="password" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+                <!--END OF PASSWORD-->
+                    <div class="row">
+                        <div class="col-md-4 center" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="name" name="submit" >
+                            </div>
+                        </div>
+                    </div>
                 </form>
+            <!--END OF FORM-->
             </div>
-        </div>
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
@@ -326,11 +379,11 @@
     </div>
 </div>
 <!--   Core   -->
-<script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
-<script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
 <!--   Argon JS   -->
-<script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+<script src="../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 <script>
     window.TrackJS &&

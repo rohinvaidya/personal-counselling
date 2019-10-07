@@ -8,14 +8,14 @@
         Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
     </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../images/w.png">
+    <link rel="shortcut icon" href="../../images/w.png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
-    <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-    <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+    <link href="../../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- CSS Files -->
-    <link href="../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+    <link href="../../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -46,7 +46,7 @@
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg
+                <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg
 ">
               </span>
                     </div>
@@ -73,8 +73,8 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="../index.html">
-                            <img src="../assets/img/brand/blue.png">
+                        <a href="../../index.html">
+                            <img src="../../assets/img/brand/blue.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -146,7 +146,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../assets/img/theme/team-4-800x800.jpg">
+                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
@@ -157,19 +157,19 @@
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome!</h6>
                         </div>
-                        <a href="../examples/profile.html" class="dropdown-item">
+                        <a href="../../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-single-02"></i>
                             <span>My profile</span>
                         </a>
-                        <a href="../examples/profile.html" class="dropdown-item">
+                        <a href="../../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-settings-gear-65"></i>
                             <span>Settings</span>
                         </a>
-                        <a href="../examples/profile.html" class="dropdown-item">
+                        <a href="../../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-calendar-grid-58"></i>
                             <span>Activity</span>
                         </a>
-                        <a href="../examples/profile.html" class="dropdown-item">
+                        <a href="../../examples/profile.html" class="dropdown-item">
                             <i class="ni ni-support-16"></i>
                             <span>Support</span>
                         </a>
@@ -198,7 +198,7 @@
 
         <!-- Dashboard-->
         <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="../images/favicon.png" alt="Card image cap">
+  <img class="card-img-top" src="../../assets/project/images/favicon.png" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -236,11 +236,11 @@
     </div>
 </div>
 <!--   Core   -->
-<script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
-<script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
 <!--   Argon JS   -->
-<script src="../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+<script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 <script>
     window.TrackJS &&
