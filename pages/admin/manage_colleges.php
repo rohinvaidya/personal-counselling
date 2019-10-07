@@ -20,7 +20,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Welcome !
+        Add Counsellor
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -125,11 +125,16 @@
             </form>
             <!-- Navigation -->
             <ul class="navbar-nav">
-                <li class="nav-item  class=' active' ">
+                <li class="nav-item  class=" active" ">
                 <a class=" nav-link " href="admin.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                        <i class="ni ni-calendar-grid-58 text-primary"></i>
+                        <span class="nav-link-text">Counsellors</span>
+                    </a>
+                    <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
                         <span class="nav-link-text">Counsellors</span>
@@ -141,7 +146,7 @@
                                 <a href="add-counsellors.php" class="nav-link">Add Counsellors</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage-counsellors.php" class="nav-link">Manage Counsellors</a>
+                                <a href="manage_counsellors.php" class="nav-link">Manage Counsellors</a>
                             </li>
                         </ul>
                     </div>
@@ -205,7 +210,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">Home</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="add-counsellors.php">Add Counsellor</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -271,15 +276,56 @@
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-        <!-- Main Content -->
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../assets/img/theme/team-1-800x800.jpg" alt="Card image cap">
+      
+  <!-- Main Content -->
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h2 class="card-title">ADD/EDIT College<hr></h2>
+                <h1 class="h3 mb-2 text-gray-800">Colleges</h1>
+          <p class="mb-4"> <a target="_blank" href="https://datatables.net"></a>.</p>
+
+          <!-- DataTales Code-->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary"><H2>College Data</h6>
             </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Image</th>
+                      <th>Description</th>
+                      <th>Expected Price</th>
+                      <th>Start date</th>
+                      <th>Function</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                  <tr>
+                      <th>Title</th>
+                      <th>Image</th>
+                      <th>Description</th>
+                      <th>Expected Price</th>
+                      <th>Start date</th>
+                      <th>Function</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
@@ -312,6 +358,17 @@
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
+
+
+<!-- Datatables JS  -->
+  <!-- Page level plugins -->
+  <script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
+
+
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
