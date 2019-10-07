@@ -41,7 +41,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="../../index.html">
+        <a class="navbar-brand pt-0" href="admin.php">
             <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
@@ -146,7 +146,7 @@
                                 <a href="add-counsellors.php" class="nav-link">Add Counsellors</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage-counsellors.php" class="nav-link">Manage Counsellors</a>
+                                <a href="manage_counsellors.php" class="nav-link">Manage Counsellors</a>
                             </li>
                         </ul>
                     </div>
@@ -180,7 +180,7 @@
                                 <a href="add-colleges.php" class="nav-link">Add Colleges</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage-colleges.php" class="nav-link">Manage Colleges</a>
+                                <a href="manage_colleges.php" class="nav-link">Manage Colleges</a>
                             </li>
                         </ul>
                     </div>
@@ -281,12 +281,12 @@
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
 <!--                MAIN FORM-->
-                <form action="add_college_processing.php" method="POST">
+                <form action="add_college_processing.php" method="POST" enctype="multipart/form-data">
 <!--                    INPUT IMAGE-->
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input name="image" type="file" class="form-control " id="image" placeholder="image">
+                                <input name="post_image" type="file" class="form-control " id="image" placeholder="image">
                             </div>
                         </div>
                     </div>
@@ -364,7 +364,7 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Email ID">
+                                <input name=" email" type="email" class="form-control" id="email" placeholder="Email ID">
                             </div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="website" class="form-control" id="website" placeholder="Website">
+                                <input name="website" type="website" class="form-control" id="website" placeholder="Website">
                             </div>
                         </div>
                     </div>
