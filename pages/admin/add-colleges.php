@@ -281,7 +281,7 @@
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
 <!--                MAIN FORM-->
-                <form action="" method="POST">
+                <form action="add_college_processing.php" method="POST">
 <!--                    INPUT IMAGE-->
                     <div class="row">
                         <div class="col-md-8">
@@ -314,19 +314,19 @@
                         <div class="col-md-8">
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox mb-3">
-                                    <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
+                                    <input value="arts" name="stream[]" class="custom-control-input" id="customCheck1" type="checkbox">
                                     <label class="custom-control-label" for="customCheck1">Arts</label>
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
-                                    <input value="commerce" name="stream" class="custom-control-input" id="customCheck2" type="checkbox">
+                                    <input value="commerce" name="stream[]" class="custom-control-input" id="customCheck2" type="checkbox">
                                     <label class="custom-control-label" for="customCheck2">Commerce</label>
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
-                                    <input value="science" name="stream" class="custom-control-input" id="customCheck3" type="checkbox" >
+                                    <input value="science" name="stream[]" class="custom-control-input" id="customCheck3" type="checkbox" >
                                     <label class="custom-control-label" for="customCheck3">Science</label>
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
-                                    <input value="diploma" name="stream" class="custom-control-input" id="customCheck4" type="checkbox">
+                                    <input value="diploma" name="stream[]" class="custom-control-input" id="customCheck4" type="checkbox">
                                     <label class="custom-control-label" for="customCheck4">Diploma</label>
                                 </div>
                             </div>
