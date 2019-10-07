@@ -280,56 +280,64 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
+                <form action="" method="POST">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="image" type="file" class="form-control" id="city" placeholder="image">
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-8">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="Name of College">
                             </div>
                         </div>
-
-                        <div class="col-md-6">
+                        <div class="col-md-8">
+                            <textarea name="description" class="form-control mt-4 mb-4" id="exampleFormControlTextarea1" rows="3" placeholder="Description of college"></textarea>
+                        </div>
+                        <div class="col-md-8">
+                        <div class="col-md-8">
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
+                                <label class="custom-control-label" for="customCheck1">Arts</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input value="commerce" name="stream" class="custom-control-input" id="customCheck2" type="checkbox">
+                                <label class="custom-control-label" for="customCheck2">Commece</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input value="science" name="stream" class="custom-control-input" id="customCheck3" type="checkbox" >
+                                <label class="custom-control-label" for="customCheck3">Science</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input value="diploma" name="stream" class="custom-control-input" id="customCheck4" type="checkbox">
+                                <label class="custom-control-label" for="customCheck4">Diploma</label>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Address of College"></textarea>
+                        </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Regular" class="form-control" disabled />
+                                <input name="city" type="text" class="form-control" id="city" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="contact" type="text" class="form-control" id="city" placeholder="Contact Number">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="city" placeholder="Email ID">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="website" class="form-control" id="city" placeholder="Website">
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="input-group mb-4">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
-                                    </div>
-                                    <input class="form-control" placeholder="Search" type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="input-group mb-4">
-                                <input class="form-control" placeholder="Birthday" type="text">
-                                <div class="input-group-append">
-                                    <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group has-success">
-                                <input type="text" placeholder="Success" class="form-control is-valid" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group has-danger">
-                                <input type="email" placeholder="Error Input" class="form-control is-invalid" />
-                            </div>
-                        </div>
-                    </div>
             </form>
         </div>
         <!-- Footer -->
