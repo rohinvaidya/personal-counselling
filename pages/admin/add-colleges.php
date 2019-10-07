@@ -280,66 +280,108 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
+<!--                MAIN FORM-->
                 <form action="" method="POST">
+<!--                    INPUT IMAGE-->
+                    <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input name="image" type="file" class="form-control mb-5" id="city" placeholder="image">
-                            </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input type="text" class="form-control mb=4" id="name" placeholder="Name of College">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea name="description" class="form-control mt-4 mb-4" id="exampleFormControlTextarea1" rows="3" placeholder="Description of college"></textarea>
-                        </div>
-                        <div class="col-md-8">
-                        <div class="col-md-8 ">
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
-                                <label class="custom-control-label" for="customCheck1">Arts</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input value="commerce" name="stream" class="custom-control-input" id="customCheck2" type="checkbox">
-                                <label class="custom-control-label" for="customCheck2">Commece</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input value="science" name="stream" class="custom-control-input" id="customCheck3" type="checkbox" >
-                                <label class="custom-control-label" for="customCheck3">Science</label>
-                            </div>
-                            <div class="custom-control custom-checkbox mb-3">
-                                <input value="diploma" name="stream" class="custom-control-input" id="customCheck4" type="checkbox">
-                                <label class="custom-control-label" for="customCheck4">Diploma</label>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea name="address" class="form-control mt-3 mb-5" id="exampleFormControlTextarea1" rows="3" placeholder="Address of College"></textarea>
-                        </div>
-                            <div class="form-group">
-                                <input name="city" type="text" class="form-control mb-5" id="city" placeholder="City">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input name="contact" type="text" class="form-control mb-5" id="city" placeholder="Contact Number">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input type="email" class="form-control mb-5" id="city" placeholder="Email ID">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input type="website" class="form-control" id="city" placeholder="Website">
+                                <input name="image" type="file" class="form-control " id="image" placeholder="image">
                             </div>
                         </div>
                     </div>
+<!--                    END OF INPUT IMAGE-->
+<!--                    NAME OF COLLEGE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name of College">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF NAME OF COLLEGE-->
+<!--                DESCRIPTION-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <textarea name="description" class="form-control" id="description" rows="3" placeholder="Description of college"></textarea>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF DESCRIPTION-->
+<!--                    CHECKBOX FOR STREAM-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck1">Arts</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="commerce" name="stream" class="custom-control-input" id="customCheck2" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck2">Commerce</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="science" name="stream" class="custom-control-input" id="customCheck3" type="checkbox" >
+                                    <label class="custom-control-label" for="customCheck3">Science</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="diploma" name="stream" class="custom-control-input" id="customCheck4" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck4">Diploma</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CHECKBOX FOR STREAMS-->
+<!--                    ADDRESS-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <textarea name="address" class="form-control" id="address" rows="3" placeholder="Address of College"></textarea>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF ADDRESS-->
+<!--                    CITY-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="city" type="text" class="form-control " id="city" placeholder="City">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CITY-->
+<!--                    CONTACT US-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="contact" type="text" class="form-control" id="contact" placeholder="Contact Number">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CONTACT US-->
+<!--                    EMAILID-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email ID">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF EMAIL-ID-->
+<!--                    WEBSITE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="website" class="form-control" id="website" placeholder="Website">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF WEBSITE-->
 
-            </form>
-        </div>
+                </form>
+<!--                END OF FORM-->
+            </div>
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
