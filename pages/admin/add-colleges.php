@@ -283,20 +283,20 @@
                 <form action="" method="POST">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input name="image" type="file" class="form-control" id="city" placeholder="image">
+                                <input name="image" type="file" class="form-control mb-5" id="city" placeholder="image">
                             </div>
                         </div>
                         <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Name of College">
+                                <input type="text" class="form-control mb=4" id="name" placeholder="Name of College">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <textarea name="description" class="form-control mt-4 mb-4" id="exampleFormControlTextarea1" rows="3" placeholder="Description of college"></textarea>
                         </div>
                         <div class="col-md-8">
-                        <div class="col-md-8">
+                        <div class="col-md-8 ">
                             <div class="custom-control custom-checkbox mb-3">
                                 <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
                                 <label class="custom-control-label" for="customCheck1">Arts</label>
@@ -315,20 +315,20 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Address of College"></textarea>
+                            <textarea name="address" class="form-control mt-3 mb-5" id="exampleFormControlTextarea1" rows="3" placeholder="Address of College"></textarea>
                         </div>
                             <div class="form-group">
-                                <input name="city" type="text" class="form-control" id="city" placeholder="City">
+                                <input name="city" type="text" class="form-control mb-5" id="city" placeholder="City">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input name="contact" type="text" class="form-control" id="city" placeholder="Contact Number">
+                                <input name="contact" type="text" class="form-control mb-5" id="city" placeholder="Contact Number">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="city" placeholder="Email ID">
+                                <input type="email" class="form-control mb-5" id="city" placeholder="Email ID">
                             </div>
                         </div>
                         <div class="col-md-8">
