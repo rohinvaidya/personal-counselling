@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Ti
+        Convocare
     </title>
     <!-- Favicon -->
-    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="shortcut icon" href="C:\xampp\htdocs\personal-counselling\images\w.png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -99,7 +99,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item" class=" active">
-                <a class=" nav-link " href="user_index.html"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <a class=" nav-link " href="user_index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">

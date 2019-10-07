@@ -8,7 +8,7 @@
         Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
     </title>
     <!-- Favicon -->
-    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="shortcut icon" href="../images/w.png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -99,7 +99,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item" class=" active">
-                <a class=" nav-link " href="user_index.html"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <a class=" nav-link " href="user_index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">
@@ -194,15 +194,19 @@
         </div>
     </div>
     <div class="container-fluid mt-5 ">
+
+
         <!-- Dashboard-->
         <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="" alt="Card image cap">
+  <img class="card-img-top" src="../images/favicon.png" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
   </div>
+
+
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
