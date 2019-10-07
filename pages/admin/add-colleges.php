@@ -1,18 +1,3 @@
-<!--
-
-=========================================================
-* Argon Dashboard - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -280,16 +265,16 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
-                <form action="" method="POST">
+                <form action="college.php" method="POST" enctype="multipart/form-data">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input name="image" type="file" class="form-control mb-5" id="city" placeholder="image">
+                                <input type="file" name="post_image" class="form-control mb-5" id="city" placeholder="image">
                             </div>
                         </div>
                         <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" class="form-control mb=4" id="name" placeholder="Name of College">
+                                <input name="name" type="text" class="form-control mb=4" id="name" placeholder="Name of College">
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -298,19 +283,19 @@
                         <div class="col-md-8">
                         <div class="col-md-8 ">
                             <div class="custom-control custom-checkbox mb-3">
-                                <input value="arts" name="stream" class="custom-control-input" id="customCheck1" type="checkbox">
+                                <input name="stream[]" value= "arts" class="custom-control-input" id="customCheck1" type="checkbox">
                                 <label class="custom-control-label" for="customCheck1">Arts</label>
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
-                                <input value="commerce" name="stream" class="custom-control-input" id="customCheck2" type="checkbox">
+                                <input name="stream[]" value= "commerce" class="custom-control-input" id="customCheck2" type="checkbox">
                                 <label class="custom-control-label" for="customCheck2">Commece</label>
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
-                                <input value="science" name="stream" class="custom-control-input" id="customCheck3" type="checkbox" >
+                                <input name="stream[]" value= "science" class="custom-control-input" id="customCheck3" type="checkbox" >
                                 <label class="custom-control-label" for="customCheck3">Science</label>
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
-                                <input value="diploma" name="stream" class="custom-control-input" id="customCheck4" type="checkbox">
+                                <input name="stream[]" value= "diploma" class="custom-control-input" id="customCheck4" type="checkbox">
                                 <label class="custom-control-label" for="customCheck4">Diploma</label>
                             </div>
                         </div>
@@ -328,16 +313,16 @@
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="email" class="form-control mb-5" id="city" placeholder="Email ID">
+                                <input name="email" type="email" class="form-control mb-5" id="city" placeholder="Email ID">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="website" class="form-control" id="city" placeholder="Website">
+                                <input name="website" type="website" class="form-control" id="city" placeholder="Website">
                             </div>
                         </div>
                     </div>
-
+                    <button class="btn btn-primary" name="submit" type="submit">Button</button>
             </form>
         </div>
         <!-- Footer -->
