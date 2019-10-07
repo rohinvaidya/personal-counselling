@@ -282,7 +282,7 @@
             <div class="card-body">
                 <h2 class="card-title">ADD/EDIT College<hr></h2>
                 <h1 class="h3 mb-2 text-gray-800">Colleges</h1>
-          <p class="mb-4"> <a target="_blank" href="https://datatables.net"></a>.</p>
+
 
           <!-- DataTales Code-->
           <div class="card shadow mb-4">
