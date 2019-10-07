@@ -378,7 +378,13 @@
                         </div>
                     </div>
 <!--                    END OF WEBSITE-->
-
+                    <div class="row">
+                        <div class="col-md-4 center" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="name" name="submit" >
+                            </div>
+                        </div>
+                    </div>
                 </form>
 <!--                END OF FORM-->
             </div>
