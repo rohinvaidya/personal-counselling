@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2019 at 01:58 PM
+-- Generation Time: Oct 07, 2019 at 08:32 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.3.2
 
@@ -64,6 +64,31 @@ CREATE TABLE `courses` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `question`
+--
+
+CREATE TABLE `question` (
+  `question_id` int(11) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `test_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `question_choice`
+--
+
+CREATE TABLE `question_choice` (
+  `choice_id` int(11) NOT NULL,
+  `question_id` int(11) NOT NULL,
+  `is_right_choice` int(2) NOT NULL,
+  `choice` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `subcourses`
 --
 
@@ -100,6 +125,20 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `conta
 (4, 'Alex', 'Solanki', 'alex@gmail.com', 'alex@123', '6547893210', 'commerce', 'client'),
 (5, 'Abdullah', 'Khan', 'abdulha@gmail.com', 'abdullah@1243', '9876543210', 'arts', 'client');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_question_answer`
+--
+
+CREATE TABLE `user_question_answer` (
+  `user_id` int(11) NOT NULL,
+  `question_id` int(11) NOT NULL,
+  `choice_id` int(11) NOT NULL,
+  `is_right` int(11) NOT NULL,
+  `test_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -115,6 +154,18 @@ ALTER TABLE `colleges`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`course_id`);
+
+--
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`question_id`);
+
+--
+-- Indexes for table `question_choice`
+--
+ALTER TABLE `question_choice`
+  ADD PRIMARY KEY (`choice_id`);
 
 --
 -- Indexes for table `user`
@@ -137,6 +188,18 @@ ALTER TABLE `colleges`
 --
 ALTER TABLE `courses`
   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `question`
+--
+ALTER TABLE `question`
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `question_choice`
+--
+ALTER TABLE `question_choice`
+  MODIFY `choice_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
