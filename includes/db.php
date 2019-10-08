@@ -4,7 +4,7 @@
 $dbHost = 'localhost';
 $dbUser = 'root';
 $dbPassword = '';
-$dbName = 'counselling';
+$dbName = 'project';
 
 $dbc = mysqli_connect($dbHost ,$dbUser ,$dbPassword ,$dbName)
     or die('error in connection');
