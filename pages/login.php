@@ -1,15 +1,15 @@
 <?php
+include("../includes/db.php");
 if(isset($_POST['login']))
     {   
         session_start();
         $email=$_POST['email'];
         $password=$_POST['password'];
 
-        $connection=mysqli_connect('localhost', 'root', '', 'prsnlcnl');
        $query="SELECT role from user where email='$email' and Password='$password'";
        $query_id="SELECT id from user where email='$email' and Password='$password'";
-       $result_role=mysqli_query($connection,$query);
-       $result_id=mysqli_query($connection,$query_id);
+       $result_role=mysqli_query($dbc,$query);
+       $result_id=mysqli_query($dbc,$query_id);
        $data=mysqli_fetch_row($result_role);
        $id_data=mysqli_fetch_assoc($result_id);   
        $id=$id_data['id'];

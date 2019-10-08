@@ -1,3 +1,4 @@
+  
 <!--
 
 =========================================================
@@ -20,7 +21,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Add Counsellor
+        Manage-College
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -130,10 +131,6 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-calendar-grid-58 text-primary"></i>
-                        <span class="nav-link-text">Counsellors</span>
-                    </a>
                     <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
@@ -281,7 +278,6 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">ADD/EDIT College<hr></h2>
-                <h1 class="h3 mb-2 text-gray-800">Colleges</h1>
 
 
           <!-- DataTales Code-->
@@ -294,25 +290,57 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Title</th>
                       <th>Image</th>
+                      <th>Name</th>
+                      <th>Streams</th>
                       <th>Description</th>
-                      <th>Expected Price</th>
-                      <th>Start date</th>
+                      <th>Address</th>
+                      <th>Contact</th>
                       <th>Function</th>
                     </tr>
                   </thead>
                   <tfoot>
                   <tr>
-                      <th>Title</th>
                       <th>Image</th>
+                      <th>Name</th>
+                      <th>Streams</th>
                       <th>Description</th>
-                      <th>Expected Price</th>
-                      <th>Start date</th>
+                      <th>Address</th>
+                      <th>Contact</th>
                       <th>Function</th>
                     </tr>
                   </tfoot>
                   <tbody>
+                  <?php
+                   include('../../includes/db.php');
+                   
+                    $query="SELECT * FROM colleges";
+                    $result=mysqli_query($dbc,$query);
+                      while($data=mysqli_fetch_assoc($result))
+                      {
+                          $post_image = $data['image'];
+                          $name=$data['college_name'];
+                          $streams=$data['stream'];
+                          $description=$data['description'];
+                          $address=$data['address'];
+                          $contact = $data['contact_no'];
+                          $college_id=$data['college_id'];
+                          echo<<<ROW
+                          <tr>
+                            <td><img src='../../storage/images/$post_image' height='100'  alt=''></td>
+                            <td>$name</td>
+                            <td>$streams</td>
+                            <td>$description</td>
+                            <td>$address</td>
+                            <td>$contact</td>
+                            <td>
+                            <a href="delete-college.php?college_id=$college_id"><button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </button></td>
+                          </tr>
+                      ROW;
+                      }
+?>
                     
                   </tbody>
                 </table>
@@ -325,6 +353,7 @@
 
       </div>
       <!-- End of Main Content -->
+
 
         <!-- Footer -->
         <footer class="footer">

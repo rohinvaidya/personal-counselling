@@ -28,7 +28,7 @@ if (isset($_POST['submit']))
 
   if($result)
   {
-      header('Location:manage_colleges.php');
+      header('Location:admin.php');
   }
   else {
     die(" Did not upload ".mysqli_error($dbc));
