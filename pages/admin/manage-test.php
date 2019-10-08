@@ -162,7 +162,7 @@ include ("includes/vertical-nav.php");
                                         echo"<td><a href=activate-test.php?test_id=".$test_id.">Activate</a></td>";
                                     else
                                         echo"<td><a href=deactivate-test.php?test_id=".$test_id.">Deactivate</a></td>";
-                                    echo "<td><a class='btn btn-danger' href=delete-test.php?test_id=".$test_id.">Delete</a></td>";
+                                    echo "<td><a class='btn btn-danger' href=delete-test-process.php?test_id=".$test_id.">Delete</a></td>";
                                     echo "</tr>";
                                 }
 

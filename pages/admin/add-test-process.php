@@ -20,6 +20,6 @@ if (isset($_POST['submit'])){
         //echo "New record created successfully";
         header("Location: add-test.php");
     } else
-        echo "Error: " . $query . "<br>" . mysqli_error($dcb);
+        echo "Error: " . $query . "<br>" . mysqli_error($dbc);
 }
 
