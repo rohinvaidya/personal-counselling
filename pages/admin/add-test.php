@@ -77,7 +77,7 @@ else
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Name of Test">
+                                <input type="text" required class="form-control" name="name" id="name" placeholder="Name of Test">
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ else
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Write a large text here ..."></textarea>
+                                <textarea class="form-control" required id="description" name="description" rows="3" placeholder="Write a large text here ..."></textarea>
                             </div>
                         </div>
                     </div>
