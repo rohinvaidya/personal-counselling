@@ -89,15 +89,10 @@
             </form>
             <!-- Navigation -->
             <ul class="navbar-nav">
-                <li class="nav-item  class=" active" ">
+                <li class="nav-item  class=' active' ">
                 <a class=" nav-link " href="admin.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-calendar-grid-58 text-primary"></i>
-                        <span class="nav-link-text">Counsellors</span>
-                    </a>
                 <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
@@ -110,7 +105,7 @@
                                 <a href="add-counsellors.php" class="nav-link">Add Counsellors</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage_counsellors.php" class="nav-link">Manage Counsellors</a>
+                                <a href="manage-counsellors.php" class="nav-link">Manage Counsellors</a>
                             </li>
                         </ul>
                     </div>
@@ -124,10 +119,10 @@
                     <div class="collapse" id="navbar-tests">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="add-tests.php" class="nav-link">Add Tests</a>
+                                <a href="add-test.php" class="nav-link">Add Tests</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage-tests.php" class="nav-link">Manage Tests</a>
+                                <a href="manage-test.php" class="nav-link">Manage Tests</a>
                             </li>
                         </ul>
                     </div>
