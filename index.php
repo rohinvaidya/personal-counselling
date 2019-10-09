@@ -114,7 +114,7 @@
                                 <li><a href="#team" class="smooth-scroll">Team</a></li>
                                 <li><a href="#testimonial" class="smooth-scroll">Testimonial</a></li>
                                 <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
-                                <li><a href="#stats" class="smooth-scroll">Stats</a></li>
+                                <!-- <li><a href="#stats" class="smooth-scroll">Stats</a></li> -->
                                 <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                                 <li><a href="pages/login.php">Login/Register</a></li>
                              </ul>
@@ -217,7 +217,7 @@
                                         <div class="content-title-underline"></div>
                                     </div>
                                      <div class="about-desc wow animated fadeInDown" data-wow-duration="0.5s" data-wow-delay=".2s">
-                                         <p>At Convocare,we provide an online counselling and emotional support platform designed to foster mental wellness.It anonymously connects you with the right expert consisting of counselors, psychologists, psychotherapists, career guides and people with rich experience, who understand you and guide you through individual sessions.</p>
+                                         <p>At Convocare,we provide an online counselling and career guidance platform designed to help students decide on their future path. It anonymously connects you with the right expert consisting of counselors, career guides and people with rich experience, who understand you and guide you through individual sessions.</p>
                                      </div><!--desc.-->
                                      <div class="about-btn">
                                          <a href="#work" title="Our Work" class="btn btn-lg btn-general btn-blue wow animated fadeInUp smooth-scroll" data-wow-duration="0.5s" data-wow-delay=".2s">Our Work</a>
@@ -242,7 +242,7 @@
                     <div class="row no-gutters wow animate fadeInUp">
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
-                                <a href="images/work/one.jpg"><img src="images/work/one.jpg" class="img-responsive" alt="">
+                                <a href="assets/project/images/work/one.jpg"><img src="assets/project/images/work/one.jpg" class="img-responsive" alt="">
                                     <div class="Bottom1">Anxiety</div>
                                  </a>
                             </div>
@@ -250,7 +250,7 @@
                         
                          <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
-                                <a href="images/work/two.jpg"><img src="images/work/two.jpg" class="img-responsive" alt="">
+                                <a href="assets/project/images/work/two.jpg"><img src="assets/project/images/work/two.jpg" class="img-responsive" alt="">
                                     <div class="Bottom2">Detoxification</div>
                                 </a>
                             </div>
@@ -258,7 +258,7 @@
                         
                          <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
-                                <a href="images/work/three.jpg"><img src="images/work/three.jpg" class="img-responsive" alt="">
+                                <a href="assets/project/images/work/three.jpg"><img src="assets/project/images/work/three.jpg" class="img-responsive" alt="">
                                     <div class="Bottom3">Depression</div>
                                 </a>
                             </div>
@@ -266,7 +266,7 @@
                         
                          <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
-                                <a href="images/work/four.jpg"><img src="images/work/four.jpg" class="img-responsive" alt="">
+                                <a href="assets/project/images/work/four.jpg"><img src="assets/project/images/work/four.jpg" class="img-responsive" alt="">
                                     <div class="Bottom4">Stress Management</div>
                                 </a>
                             </div>
@@ -290,7 +290,7 @@
                                 <div class="team-members owl-carousel owl-theme">
                                     
                                     <div class="team-member">
-                                        <img src="images/team/team-1.jpg" alt="Team Member 1" class="img-responsive">
+                                        <img src="assets/project/images/team/team-1.jpg" alt="Team Member 1" class="img-responsive">
                                         <div class="team-member-info">
                                             <h4 class="team-member-name">Daniel Watrous</h4>
                                             <h4 class="team-member-designation">Counselling Psychologist</h4>
@@ -303,7 +303,7 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="images/team/team-2.jpg" alt="Team Member 2" class="img-responsive">
+                                        <img src="assets/project/images/team/team-2.jpg" alt="Team Member 2" class="img-responsive">
                                         <div class="team-member-info">
                                             <h4 class="team-member-name">Sara Smith</h4>
                                             <h4 class="team-member-designation">Psychologist</h4>
@@ -316,7 +316,7 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="images/team/team-3.jpg" alt="Team Member 3" class="img-responsive">
+                                        <img src="assets/project/images/team/team-3.jpg" alt="Team Member 3" class="img-responsive">
                                         <div class="team-member-info">
                                             <h4 class="team-member-name">Steve Mike</h4>
                                             <h4 class="team-member-designation">Clinical Psychologist</h4>
@@ -329,7 +329,7 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="images/team/team-4.jpg" alt="Team Member 4" class="img-responsive">
+                                        <img src="assets/project/images/team/team-4.jpg" alt="Team Member 4" class="img-responsive">
                                         <div class="team-member-info">
                                             <h4 class="team-member-name">Robert Hinay</h4>
                                             <h4 class="team-member-designation">Counselor</h4>
@@ -342,7 +342,7 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="images/team/team-5.jpg" alt="Team Member 5" class="img-responsive">
+                                        <img src="assets/project/images/team/team-5.jpg" alt="Team Member 5" class="img-responsive">
                                         <div class="team-member-info">
                                             <h4 class="team-member-name">Mike Tera</h4>
                                             <h4 class="team-member-designation">Industrial Psychologist</h4>
@@ -375,7 +375,7 @@
                             <div class="customers-testimonials text-center owl-carousel owl-theme">
 
                                 <div class="testimonial">
-                                    <img src="images/client/client-1.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/client-1.jpg" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
                                         <p>I was struggling with some issues and the platform was so helpful!
                                             The counsellors were patient and understanding!
@@ -390,7 +390,7 @@
                                 </div><!--testimonial-->
 
                                 <div class="testimonial">
-                                    <img src="images/client/client-2.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/client-2.jpg" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
                                         <p>Being in the It sector can be tough and Convocae have been excellent at Industrial Level Counselling which has given me a very stable workforce to work with</p>
                                     </blockquote>
@@ -403,7 +403,7 @@
                                 </div><!--testimonial-->
 
                                 <div class="testimonial">
-                                    <img src="images/client/client-3.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/client-3.jpg" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
                                         <p>Convocare has proven to be a reliable partner in helping me in most stressful of my times.</p>
                                     </blockquote>
@@ -554,7 +554,7 @@
                         <div class="col-md-6">
                             <div class="contact-left">
                                 <h3>CONVOCARE</h3>
-                                <P>We at <b>Convocare</b>believe that Councilling is not just our work but, a <b>Social Responsibility</b>to help our fellow brothers live better</P>
+                                <P>We at <b>Convocare </b>believe that Councilling is not just our work but, a <b>Social Responsibility </b>to help our fellow brothers live better</P>
                                 <div class="contact-info">
                                     <address>
                                         <strong>Headquaters:</strong> 
