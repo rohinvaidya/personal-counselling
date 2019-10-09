@@ -1,34 +1,42 @@
 <?php
+
+include("../includes/db.php");
+
 if(isset($_POST['login']))
     {   
         session_start();
-        $email=$_POST['email'];
-        $password=$_POST['password'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        $connection=mysqli_connect('localhost', 'root', '', 'prsnlcnl');
-       $query="SELECT role from user where email='$email' and Password='$password'";
-       $query_id="SELECT id from user where email='$email' and Password='$password'";
-       $result_role=mysqli_query($connection,$query);
-       $result_id=mysqli_query($connection,$query_id);
+       $query = "SELECT role from user where email='".$email."' and Password='".$password."'";
+       $query_id = "SELECT id from user where email='".$email."' and Password='".$password."'";
+
+       $result_role = mysqli_query($dbc,$query);
+       $result_id = mysqli_query($dbc,$query_id);
+
        $data=mysqli_fetch_row($result_role);
-       $id_data=mysqli_fetch_assoc($result_id);   
-       $id=$id_data['id'];
+       $id_data=mysqli_fetch_assoc($result_id); 
+
+       $id = $id_data['id'];
        $_SESSION['id']=$id;
-       if($data[0]==1)
+
+       if($data[0]== 'admin')
        {
-           header('Location:admin.php');
+           header('Location:admin/admin.php');
        }
-       if($data[0]==2)
+       else if($data[0]== 'counsellor')
        {
            header('Location:counsellor.php');
        }
-       if($data[0]==3)
+       else if($data[0]== 'client')
        {
            header('Location:user.php');
        }
+       else
+       {
+         echo "Error!!";
+       }
     }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +129,7 @@ if(isset($_POST['login']))
             
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>sign in with credentials</small>
+                <small>Sign in with your credentials</small>
               </div>
               <form action="" method="POST" role="form">
                 <div class="form-group mb-3">
@@ -151,7 +159,7 @@ if(isset($_POST['login']))
               <a href="#" class="text-light"><small>Forgot password?</small></a>
             </div>
             <div class="col-6 text-right">
-              <a href="#" class="text-light"><small>Create new account</small></a>
+              <a href="#" class="text-light"><small>Create a new account</small></a>
             </div>
           </div>
         </div>
