@@ -193,65 +193,107 @@
             </div>
         </div>
     </div>
+
+
     <div class="container-fluid mt-5 ">
-
-
-    <div class="row">
-        <div class="col-md-8"></div>
-    </div>
-
-
-        <!-- Dashboard-->
-        <?php
-        $test_id=$_GET['test_id'];
-             include('../../includes/db.php');
-             $query="SELECT * FROM question_choice where test_id=$test_id";
-             $result=mysqli_query($dbc,$query);
-             $no=0;
-             echo "<form action='test_processing.php' method='POST'>";
-                      while($data=mysqli_fetch_assoc($result))
-                      {
-                          $question= $data['question'];
-                          $opt1=$data['option1'];
-                          $opt2=$data['option2'];
-                          $opt3=$data['option3'];
-                          $opt4=$data['option4'];
-                          echo<<<ROW
-                          <div class="row">
+        <!-- Main Content -->
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Add Question<hr></h2>
+                <!--                MAIN FORM-->
+                <form action="submit-test-process.php" method="POST">
+                    <?php
+                    $test_id=$_GET['test_id'];
+                    include('../../includes/db.php');
+                    $query="SELECT * FROM question_choice where test_id=$test_id";
+                    $result=mysqli_query($dbc,$query);
+                    $no=0;
+                    echo "<form action='test_processing.php' method='POST'>";
+                    $i=0;
+                    while($data=mysqli_fetch_assoc($result))
+                    {
+                        $i++;
+                        $question_id= $data['question_id'];
+                        $question= $data['question'];
+                        $opt1=$data['option1'];
+                        $opt2=$data['option2'];
+                        $opt3=$data['option3'];
+                        $opt4=$data['option4'];
+                        $correct_answer = $data['correct_answer'];
+                        echo<<<ROW
+                            <input type="hidden" value="$question_id" name="question_id_$i">
+                            <input type="hidden"value="$correct_answer" name="correct_answer_$i">
+                          <div class="row ml-4">
                                 <div class="col-md-8">
-                                    <label>$question<label></br>
+                                    <label>$i. $question<label></br>
                                 </div>
                             </div>
                           
-                            <div class="row">
+                            <div class="row ml-6">
                                 <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio5" type="radio">
-                                    <label class="custom-control-label" for="customRadio5">$opt1</label>
+                                    <input name="options_$i" value="$opt1" class="custom-control-input" required id="option1-$i" type="radio">
+                                    <label class="custom-control-label" for="option1-$i">$opt1</label>
                                 </div>
 
                                 <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio6" type="radio">
-                                    <label class="custom-control-label" for="customRadio6">$opt2</label>
+                                    <input name="options_$i" value="$opt2" class="custom-control-input" required id="option2-$i" type="radio">
+                                    <label class="custom-control-label" for="option2-$i">$opt2</label>
                                 </div>
                             </div>    
 
-                            <div class="row">
+                            <div class="row ml-6">
                                 <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio7" type="radio">
-                                    <label class="custom-control-label" for="customRadio7">$opt3</label>
+                                    <input name="options_$i" value="$opt3" class="custom-control-input" required id="option3-$i" type="radio">
+                                    <label class="custom-control-label" for="option3-$i">$opt3</label>
                                 </div>
 
                                 <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio8" type="radio">
-                                    <label class="custom-control-label" for="customRadio8">$opt4</label>
+                                    <input name="options_$i" value="$opt4" class="custom-control-input" required id="option4-$i" type="radio">
+                                    <label class="custom-control-label" for="option4-$i">$opt4</label>
                                 </div>
                             </div>    
 ROW;
-                      }
-                      echo "<button type='submit'>Submit</button>";
-                  ?>
-    
-    
+                    }
+                    ?>
+                    <?php echo "<input type='hidden' name='i_value' value='$i'"; ?>
+                    <div class="row">
+                        <div class="col-md-3 ml-7 mt-4" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Submit test" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--                END OF FORM-->
+
+            </div>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="row align-items-center justify-content-xl-between">
+                    <div class="col-xl-6">
+                        <div class="copyright text-center text-xl-left text-muted">
+                            &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                            <li class="nav-item">
+                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
 
 

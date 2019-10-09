@@ -2,14 +2,14 @@
 include ("../../includes/db.php");
 $test_id = $_GET['test_id'];
 
-if (isset($_SESSION))
+/*if (isset($_SESSION))
 {
     echo $_SESSION['id'];
 }
 else
 {
     header('Location:../error.php');
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
