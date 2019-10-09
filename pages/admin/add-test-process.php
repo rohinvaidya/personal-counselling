@@ -13,7 +13,8 @@ include('../../includes/db.php');
 if (isset($_POST['submit'])){
 
     $name=$_POST['name'];
-    $query = "INSERT INTO test(test_name,is_active)VALUES('$name',0)";
+    $test_description = $_POST['description'];
+    $query = "INSERT INTO test(test_name,test_description,is_active)VALUES('$name','$test_description',0)";
 
 
     if (mysqli_query($dbc, $query)) {

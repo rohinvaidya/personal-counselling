@@ -122,6 +122,14 @@
                         </div>
                     </div>
 <!--                    END OF NAME OF Test-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Write a large text here ..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
 <!---->
                     <div class="row">
                         <div class="col-md-4" >
