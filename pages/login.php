@@ -13,6 +13,11 @@ if(isset($_POST['login']))
 
        $result_role = mysqli_query($dbc,$query);
        $result_id = mysqli_query($dbc,$query_id);
+  
+       $query="SELECT role from user where email='$email' and Password='$password'";
+       $query_id="SELECT id from user where email='$email' and Password='$password'";
+       $result_role=mysqli_query($dbc,$query);
+       $result_id=mysqli_query($dbc,$query_id);
 
        $data=mysqli_fetch_row($result_role);
        $id_data=mysqli_fetch_assoc($result_id); 

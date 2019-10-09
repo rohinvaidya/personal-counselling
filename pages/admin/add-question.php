@@ -1,4 +1,3 @@
-  
 <!--
 
 =========================================================
@@ -16,12 +15,14 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+$test_id = $_GET['test_id'];
+?>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Manage-College
+        Add Question
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -42,7 +43,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="admin.php">
+        <a class="navbar-brand pt-0" href="../../index.html">
             <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
@@ -131,7 +132,11 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                    <li class="nav-item">
+                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                        <i class="ni ni-calendar-grid-58 text-primary"></i>
+                        <span class="nav-link-text">Counsellors</span>
+                    </a>
+                <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
                         <span class="nav-link-text">Counsellors</span>
@@ -143,7 +148,7 @@
                                 <a href="add-counsellors.php" class="nav-link">Add Counsellors</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage_counsellors.php" class="nav-link">Manage Counsellors</a>
+                                <a href="manage-counsellors.php" class="nav-link">Manage Counsellors</a>
                             </li>
                         </ul>
                     </div>
@@ -177,7 +182,7 @@
                                 <a href="add-colleges.php" class="nav-link">Add Colleges</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage_colleges.php" class="nav-link">Manage Colleges</a>
+                                <a href="manage-colleges.php" class="nav-link">Manage Colleges</a>
                             </li>
                         </ul>
                     </div>
@@ -207,7 +212,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="add-counsellors.php">Add Counsellor</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="add-counsellors.php">Add <Test></Test></a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -273,142 +278,112 @@
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-      
-  <!-- Main Content -->
+        <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">ADD/EDIT College<hr></h2>
-
-
-          <!-- DataTales Code-->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><H2>College Data</h6>
+                <h2 class="card-title">Add Question<hr></h2>
+                <!--                MAIN FORM-->
+                <form action="add-question-process.php?test_id=<?php echo $test_id?>" method="POST">
+                    <!--                    QUESTION-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="question" id="question" placeholder="Enter the question">
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    END OF QUESTION-->
+                    <!--                    OPTION 1 AND 2T-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="option1" id="option1" placeholder="Option 1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="option2" id="option2" placeholder="Option 2">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF OPTION 1 AND 2-->
+<!--                    OPTION 3 AND 4-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="option3" id="option3" placeholder="Option 3">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="option4" id="option4" placeholder="Option 4">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF OPTION 3 AND 4-->
+<!--                    CORRECT ANSWER-->
+                    <div class="row">
+                        <div class="col-md-6 center">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="correct_answer" id="correct_answer" placeholder="Correct answer">
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    END OF CORRECT ANSWER-->
+                    <!--SUBMIT BUTTON-->
+                    <div class="row">
+                        <div class="col-md-4 center" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Add Question" >
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF SUBMIT BUTTON-->
+                </form>
+                <!--                END OF FORM-->
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Image</th>
-                      <th>Name</th>
-                      <th>Streams</th>
-                      <th>Description</th>
-                      <th>Address</th>
-                      <th>Contact</th>
-                      <th>Function</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                  <tr>
-                      <th>Image</th>
-                      <th>Name</th>
-                      <th>Streams</th>
-                      <th>Description</th>
-                      <th>Address</th>
-                      <th>Contact</th>
-                      <th>Function</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                  <?php
-                   include('../../includes/db.php');
-                   
-                    $query="SELECT * FROM colleges";
-                    $result=mysqli_query($dbc,$query);
-                      while($data=mysqli_fetch_assoc($result))
-                      {
-                          $post_image = $data['image'];
-                          $name=$data['college_name'];
-                          $streams=$data['stream'];
-                          $description=$data['description'];
-                          $address=$data['address'];
-                          $contact = $data['contact_no'];
-                          $college_id=$data['college_id'];
-                          echo<<<ROW
-                          <tr>
-                            <td><img src='../../storage/images/$post_image' height='100'  alt=''></td>
-                            <td>$name</td>
-                            <td>$streams</td>
-                            <td>$description</td>
-                            <td>$address</td>
-                            <td>$contact</td>
-                            <td>
-                            <a href="delete-college.php?college_id=$college_id"><button type="button" class="btn btn-danger">Delete</button>
-                            <a href="edit-colleges.php?college_id=$college_id"><button type="button" class="btn btn-primary">Edit</button>
-                            </td>
-                        </button></td>
-                          </tr>
-                      ROW;
-                      }
-?>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="row align-items-center justify-content-xl-between">
-                <div class="col-xl-6">
-                    <div class="copyright text-center text-xl-left text-muted">
-                        &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="row align-items-center justify-content-xl-between">
+                    <div class="col-xl-6">
+                        <div class="copyright text-center text-xl-left text-muted">
+                            &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                            <li class="nav-item">
+                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-                        <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
-</div>
-<!--   Core   -->
-<script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
-<script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!--   Optional JS   -->
-
-
-<!-- Datatables JS  -->
-  <!-- Page level plugins -->
-  <script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
-
-
-<!--   Argon JS   -->
-<script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
-<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-<script>
-    window.TrackJS &&
-    TrackJS.install({
-        token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "argon-dashboard-free"
-    });
-</script>
+    <!--   Core   -->
+    <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--   Optional JS   -->
+    <!--   Argon JS   -->
+    <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+        window.TrackJS &&
+        TrackJS.install({
+            token: "ee6fab19c5a04ac1a32a645abde4613a",
+            application: "argon-dashboard-free"
+        });
+    </script>
 </body>
 
 </html>
