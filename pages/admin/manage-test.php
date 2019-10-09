@@ -157,7 +157,7 @@ include ("includes/vertical-nav.php");
 
                                     echo "<tr>";
                                     echo "<td>$name</td>";
-                                    echo "<td><a href=view-question.php?test_id=".$test_id.">View Questions</a></td>";
+                                    echo "<td><a href=manage-question.php?test_id=".$test_id.">View Questions</a></td>";
                                     if ($active==0)
                                         echo"<td><a href=activate-test.php?test_id=".$test_id.">Activate</a></td>";
                                     else
