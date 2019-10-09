@@ -37,9 +37,7 @@ include ("../../includes/db.php");
 </head>
 
 <body class="">
-<?php
-include ("includes/vertical-nav.php");
-?>
+<?php include("includes/vertical-nav.php");?>
 <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
