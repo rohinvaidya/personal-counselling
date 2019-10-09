@@ -124,6 +124,7 @@ else
                                     <th>Test name</th>
                                     <th>View Question</th>
                                     <th>Activate/Deactivate</th>
+                                    <th>Description</th>
                                     <th>Delete</th>
                                 </tr>
                                 </thead>
@@ -132,19 +133,21 @@ else
                                     <th>Test name</th>
                                     <th>View Question</th>
                                     <th>Activate/Deactivate</th>
+                                    <th>Description</th>
                                     <th>Delete</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
 
                                 <?php
-                                $sql = "SELECT * FROM TEST";
+                                    $sql = "SELECT * FROM TEST";
                                 $result = mysqli_query($dbc, $sql);
 
                                 while($row = mysqli_fetch_assoc($result)) {
                                     $test_id = $row['test_id'];
                                     $name = $row['test_name'];
                                     $active = $row['is_active'];
+                                    $description = $row['test_description'];
 
 
                                     echo "<tr>";
@@ -154,6 +157,7 @@ else
                                         echo"<td><a href=activate-test.php?test_id=".$test_id.">Activate</a></td>";
                                     else
                                         echo"<td><a href=deactivate-test.php?test_id=".$test_id.">Deactivate</a></td>";
+                                    echo "<td>$description</td>";
                                     echo "<td><a class='btn btn-danger' href=delete-test-process.php?test_id=".$test_id.">Delete</a></td>";
                                     echo "</tr>";
                                 }

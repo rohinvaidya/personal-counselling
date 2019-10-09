@@ -177,8 +177,8 @@ include ("includes/vertical-nav.php");
                                     echo "<td>$opt3</td>";
                                     echo "<td>$opt4</td>";
                                     echo "<td>$correct_ans</td>";
-                                    echo "<td><a class='btn btn-danger' href=edit-question-process.php?question_id=".$question_id.">Edit</a></td>";
-                                    echo "<td><a class='btn btn-danger' href=delete-question-process.php?question_id=".$question_id.">Delete</a></td>";
+                                    echo "<td><a class='btn btn-danger' href=edit-question.php?question_id=".$question_id.">Edit</a></td>";
+                                    echo "<td><a class='btn btn-danger' href=delete-question-process.php?question_id=".$question_id."&test_id=$test_id>Delete</a></td>";
                                     echo "</tr>";
                                 }
 
