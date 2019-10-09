@@ -144,7 +144,7 @@ include ("../../includes/db.php");
                                 <tbody>
 
                                 <?php
-                                $sql = "SELECT * FROM TEST";
+                                    $sql = "SELECT * FROM TEST";
                                 $result = mysqli_query($dbc, $sql);
 
                                 while($row = mysqli_fetch_assoc($result)) {
