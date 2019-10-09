@@ -218,7 +218,7 @@
                                             </div>
                                         </div>
                                         <p class="mt-3 mb-0 text-muted text-sm">
-                                            <span class="text-nowrap"><a href='give_test.php?test_id=$test_id'><button class="btn btn-primary" type="button">Give Test</button></a></span>
+                                            <span class="text-nowrap"><a href='give-test.php?test_id=$test_id'><button class="btn btn-primary" type="button">Give Test</button></a></span>
                                         </p>
                                     </div>
                                 </div>

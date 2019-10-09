@@ -76,7 +76,7 @@ $test_id = $_GET['test_id'];
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="question" id="question" placeholder="Enter the question">
+                                <input type="text" required class="form-control" name="question" id="question" placeholder="Enter the question">
                             </div>
                         </div>
                     </div>
@@ -85,12 +85,12 @@ $test_id = $_GET['test_id'];
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="option1" id="option1" placeholder="Option 1">
+                                <input type="text" required class="form-control" name="option1" id="option1" placeholder="Option 1">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="option2" id="option2" placeholder="Option 2">
+                                <input type="text" required class="form-control" name="option2" id="option2" placeholder="Option 2">
                             </div>
                         </div>
                     </div>
@@ -99,12 +99,12 @@ $test_id = $_GET['test_id'];
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="option3" id="option3" placeholder="Option 3">
+                                <input type="text" required class="form-control" name="option3" id="option3" placeholder="Option 3">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="option4" id="option4" placeholder="Option 4">
+                                <input type="text" required class="form-control" name="option4" id="option4" placeholder="Option 4">
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ $test_id = $_GET['test_id'];
                     <div class="row">
                         <div class="col-md-6 center">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="correct_answer" id="correct_answer" placeholder="Correct answer">
+                                <input type="text" required class="form-control" name="correct_answer" id="correct_answer" placeholder="Correct answer">
                             </div>
                         </div>
                     </div>
