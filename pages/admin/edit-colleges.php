@@ -1,4 +1,11 @@
-  
+<?php
+include('../../includes/db.php');
+$college_id=$_GET['college_id'];
+$query="SELECT * FROM colleges where college_id=$college_id";
+$result=mysqli_query($dbc,$query);
+$data=mysqli_fetch_assoc($result);
+?>
+
 <!--
 
 =========================================================
@@ -21,7 +28,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Manage-College
+        Add Counsellor
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -126,11 +133,10 @@
             </form>
             <!-- Navigation -->
             <ul class="navbar-nav">
-                <li class="nav-item  class=" active" ">
+                <li class="nav-item  class=">
                 <a class=" nav-link " href="admin.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
-                <li class="nav-item">
                     <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
@@ -273,89 +279,118 @@
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-      
-  <!-- Main Content -->
+        <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">ADD/EDIT College<hr></h2>
-
-
-          <!-- DataTales Code-->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><H2>College Data</h6>
+                <h2 class="card-title">Add College<hr></h2>
+<!--                MAIN FORM-->
+                <form action="edit-college_process.php?college_id=<?php echo $college_id ?>" method="POST" enctype="multipart/form-data">
+<!--                    INPUT IMAGE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="post_image" type="file" class="form-control " id="image" placeholder="image">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF INPUT IMAGE-->
+<!--                    NAME OF COLLEGE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" value="<?php echo $data['college_name'];?>" class="form-control" name="name" id="name"` placeholder="Name of College">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF NAME OF COLLEGE-->
+<!--                DESCRIPTION-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <textarea name="description" class="form-control" id="description" rows="3" placeholder="Description of college"><?php echo $data['description'];?></textarea>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF DESCRIPTION-->
+<!--                    CHECKBOX FOR STREAM-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="arts" name="stream[]" class="custom-control-input" id="customCheck1" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck1">Arts</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="commerce" name="stream[]" class="custom-control-input" id="customCheck2" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck2">Commerce</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="science" name="stream[]" class="custom-control-input" id="customCheck3" type="checkbox" >
+                                    <label class="custom-control-label" for="customCheck3">Science</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input value="diploma" name="stream[]" class="custom-control-input" id="customCheck4" type="checkbox">
+                                    <label class="custom-control-label" for="customCheck4">Diploma</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CHECKBOX FOR STREAMS-->
+<!--                    ADDRESS-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <textarea name="address" class="form-control" id="address" rows="3" placeholder="Address of College"><?php echo $data['address'];?></textarea>
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF ADDRESS-->
+<!--                    CITY-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="city" type="text" value="<?php echo $data['city'];?>"class="form-control " id="city" placeholder="City">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CITY-->
+<!--                    CONTACT US-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="contact" type="text" value="<?php echo $data['contact_no'];?>" class="form-control" id="contact" placeholder="Contact Number">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF CONTACT US-->
+<!--                    EMAILID-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name=" email" type="email" value="<?php echo $data['email'];?>" class="form-control" id="email" placeholder="Email ID">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF EMAIL-ID-->
+<!--                    WEBSITE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input name="website" type="website" value="<?php echo $data['website'];?>" class="form-control" id="website" placeholder="Website">
+                            </div>
+                        </div>
+                    </div>
+<!--                    END OF WEBSITE-->
+                    <div class="row">
+                        <div class="col-md-4 center" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="name" name="submit" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+<!--                END OF FORM-->
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Image</th>
-                      <th>Name</th>
-                      <th>Streams</th>
-                      <th>Description</th>
-                      <th>Address</th>
-                      <th>Contact</th>
-                      <th>Function</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                  <tr>
-                      <th>Image</th>
-                      <th>Name</th>
-                      <th>Streams</th>
-                      <th>Description</th>
-                      <th>Address</th>
-                      <th>Contact</th>
-                      <th>Function</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                  <?php
-                   include('../../includes/db.php');
-                   
-                    $query="SELECT * FROM colleges";
-                    $result=mysqli_query($dbc,$query);
-                      while($data=mysqli_fetch_assoc($result))
-                      {
-                          $post_image = $data['image'];
-                          $name=$data['college_name'];
-                          $streams=$data['stream'];
-                          $description=$data['description'];
-                          $address=$data['address'];
-                          $contact = $data['contact_no'];
-                          $college_id=$data['college_id'];
-                          echo<<<ROW
-                          <tr>
-                            <td><img src='../../storage/images/$post_image' height='100'  alt=''></td>
-                            <td>$name</td>
-                            <td>$streams</td>
-                            <td>$description</td>
-                            <td>$address</td>
-                            <td>$contact</td>
-                            <td>
-                            <a href="delete-college.php?college_id=$college_id"><button type="button" class="btn btn-danger">Delete</button>
-                            <a href="edit-colleges.php?college_id=$college_id"><button type="button" class="btn btn-primary">Edit</button>
-                            </td>
-                        </button></td>
-                          </tr>
-                      ROW;
-                      }
-?>
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
@@ -388,17 +423,6 @@
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
-
-
-<!-- Datatables JS  -->
-  <!-- Page level plugins -->
-  <script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
-
-
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
