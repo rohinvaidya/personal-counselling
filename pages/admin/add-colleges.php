@@ -69,7 +69,7 @@ else
             <div class="card-body">
                 <h2 class="card-title">Add College<hr></h2>
 <!--                MAIN FORM-->
-                <form action="add_college_processing.php" method="POST" enctype="multipart/form-data">
+                <form action="add-college-processing.php" method="POST" enctype="multipart/form-data">
 <!--                    INPUT IMAGE-->
                     <div class="row">
                         <div class="col-md-8">

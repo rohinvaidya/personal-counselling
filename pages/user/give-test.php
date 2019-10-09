@@ -26,7 +26,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="user_index.php">
+        <a class="navbar-brand pt-0" href="user-index.php">
             <h3 class="navbar-brand-img" alt="...">CONVOCARE</h3>
         </a>
         <!-- User -->
@@ -99,7 +99,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item" class=" active">
-                <a class=" nav-link " href="user_index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <a class=" nav-link " href="user-index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">
@@ -128,7 +128,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="user_index.php">Your Preferance</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="user-index.php">Your Preferance</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
