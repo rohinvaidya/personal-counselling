@@ -23,7 +23,7 @@ if(isset($_POST['login']))
        $id_data=mysqli_fetch_assoc($result_id); 
 
        $id = $id_data['id'];
-       $_SESSION['id']=$id;
+       $_SESSION['id'] = $id;
 
        if($data[0]== 'admin')
        {

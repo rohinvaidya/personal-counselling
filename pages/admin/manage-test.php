@@ -1,20 +1,14 @@
-<!--
-
-=========================================================
-* Argon Dashboard - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <?php
 include ("../../includes/db.php");
+
+if (isset($_SESSION))
+{
+    echo $_SESSION['id'];
+}
+else
+{
+    header('Location:../error.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +17,7 @@ include ("../../includes/db.php");
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Add Counsellor
+        Manage Test
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -113,14 +107,14 @@ include ("../../includes/db.php");
         <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">ADD/EDIT College<hr></h2>
-                <h1 class="h3 mb-2 text-gray-800">Colleges</h1>
+                <h2 class="card-title">ADD/EDIT Test<hr></h2>
+                <h1 class="h3 mb-2 text-gray-800">Test</h1>
 
 
                 <!-- DataTales Code-->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><H2>College Data</h6>
+                        <h6 class="m-0 font-weight-bold text-primary"><H2>Test Data</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
