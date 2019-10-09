@@ -90,8 +90,8 @@ p{
 }
 
 .home-cover {
-    background-image: url('../images/bg-home.jpg');
-/*    background-color: blueviolet;*/
+    /*background-image: url('../images/bg-home.jpg');*/
+    background-color: blueviolet;
     height: 100%;
 }
 
