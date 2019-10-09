@@ -5,7 +5,7 @@ if (isset($_SESSION))
 }
 else
 {
-    header('Location:../error.php');
+   // header('Location:../error.php');
 }
 ?>
 <!DOCTYPE html>

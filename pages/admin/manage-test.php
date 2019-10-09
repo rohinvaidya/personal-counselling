@@ -1,6 +1,6 @@
 <?php
 include ("../../includes/db.php");
-
+/*
 if (isset($_SESSION))
 {
     echo $_SESSION['id'];
@@ -8,7 +8,7 @@ if (isset($_SESSION))
 else
 {
     header('Location:../error.php');
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
