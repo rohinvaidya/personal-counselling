@@ -55,7 +55,6 @@ if (isset($_POST['submit'])){
     if(!$result)
         die("there was some error in database while inserting 2".mysqli_error($dbc));
     else
-        header("Location: test.php");
-
+        header("Location: score.php?score=$score");
 
 }
