@@ -4,9 +4,9 @@ if (isset($_SESSION))
     echo $_SESSION['id'];
 }
 else
-{
-    header('Location:../error.php');
-}
+// {
+//     header('Location:../error.php');
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
