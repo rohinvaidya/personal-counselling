@@ -51,6 +51,11 @@ p {
   color: #fff;
 }
 
+.btn-black {
+  border-color: #000;
+  color: #000;
+}
+
 .btn-white:hover,
 .btn-white:focus {
   background: #fff;
@@ -107,7 +112,7 @@ p {
 }
 
 .home-cover h2 {
-  color: #fff;
+  color: #000;
   font-size: 55px;
   font-weight: bold;
   margin: 20px 0;
@@ -230,7 +235,7 @@ p {
   width: 60%;
   float: right;
   height: 700px;
-  background-image: url("../images/bg-about.jpg");
+  background-image: url("../images/Graduation.jpg");
   border-left: solid 200px #fff;
   border-top: solid 700px transparent;
 }
