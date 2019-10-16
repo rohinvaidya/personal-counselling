@@ -100,7 +100,7 @@ if(isset($_POST['login']))
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="register.php">
+              <a class="nav-link nav-link-icon" href="register.html">
                 <i class="ni ni-circle-08"></i>
                 <span class="nav-link-inner--text">Register</span>
               </a>
@@ -165,7 +165,7 @@ if(isset($_POST['login']))
               <a href="#" class="text-light"><small>Forgot password?</small></a>
             </div> -->
             <div class="col-6 text-left">
-              <a href="register.php" class="text-light"><small>Create a new account</small></a>
+              <a href="register.html" class="text-light"><small>Create a new account</small></a>
             </div>
           </div>
         </div>
