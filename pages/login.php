@@ -39,7 +39,8 @@ if(isset($_POST['login']))
        }
        else
        {
-         echo "Error!!";
+        //  echo "Error!!";
+          header('Location:error.php');
        }
     }
 ?>
@@ -160,11 +161,11 @@ if(isset($_POST['login']))
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-6">
+            <!-- <div class="col-6">
               <a href="#" class="text-light"><small>Forgot password?</small></a>
-            </div>
-            <div class="col-6 text-right">
-              <a href="#" class="text-light"><small>Create a new account</small></a>
+            </div> -->
+            <div class="col-6 text-left">
+              <a href="register.php" class="text-light"><small>Create a new account</small></a>
             </div>
           </div>
         </div>
