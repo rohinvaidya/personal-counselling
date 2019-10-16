@@ -89,17 +89,25 @@
           <div class="card bg-secondary shadow border-0">
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>Sign up with credentials</small>
+                <small>Regestration for Clients</small>
               </div>
-              <form action="register.php" method="POST" role="form">
+              <form action="register.php" method="POST" role="form" enctype="multipart/form-data">
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" name="name" placeholder="Name" type="text">
+                    <input class="form-control" name="fname" placeholder="First Name" type="text">
                   </div>
                 </div>
+                <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      </div>
+                      <input class="form-control" name="lname" placeholder="Last Name" type="text">
+                    </div>
+                  </div>
                 <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                       <div class="input-group-prepend">
@@ -116,6 +124,44 @@
                       <input class="form-control" name="password" placeholder="Password" type="password">
                     </div>
                   </div>
+                  <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" name="number" placeholder="Contact No." type="text">
+                    </div>
+                  </div>
+  <!--                    CHECKBOX FOR STREAM-->
+  <div class="row">
+      <div class="col-md-8">
+          <div class="form-group">
+              <div class="custom-control custom-checkbox mb-3">
+                  <input value="arts" name="stream[]" class="custom-control-input" id="customCheck1" type="checkbox">
+                  <label class="custom-control-label" for="customCheck1">Arts</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input value="commerce" name="stream[]" class="custom-control-input" id="customCheck2" type="checkbox">
+                  <label class="custom-control-label" for="customCheck2">Commerce</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input value="science" name="stream[]" class="custom-control-input" id="customCheck3" type="checkbox" >
+                  <label class="custom-control-label" for="customCheck3">Science</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input value="diploma" name="stream[]" class="custom-control-input" id="customCheck4" type="checkbox">
+                  <label class="custom-control-label" for="customCheck4">Diploma</label>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--                    INPUT IMAGE-->
+  <div class="row">
+      <div class="col-md-8">
+          <div class="form-group">
+              <input name="post_image" type="file" class="form-control " id="image" placeholder="image">
+          </div>
+      </div>
+  </div>
                 <div class="text-center">
                 <button type="submit" name="register" class="btn btn-primary my-4">Create Account</button>
                 </div>

@@ -139,7 +139,7 @@
                                 <a href="add-colleges.php" class="nav-link">Add Colleges</a>
                             </li>
                             <li class="nav-item">
-                                <a href="manage_colleges.php" class="nav-link">Manage Colleges</a>
+                                <a href="manage-colleges.php" class="nav-link">Manage Colleges</a>
                             </li>
                         </ul>
                     </div>
