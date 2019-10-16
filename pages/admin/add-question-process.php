@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
     //die($query);
 
     $result=mysqli_query($dbc,$query);
-    if($result)
+    if(!$result)
     {
         header('Location: add-question.php?test_id='.$test_id);
     }
