@@ -2,12 +2,16 @@
 if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $first_name=$_POST['name'];
-    echo $email;
-    echo $first_name;
-    echo $password;
-    $connection = mysqli_connect('localhost', 'root', '','prsnlcnl');
-    if($connection)
+    $first_name=$_POST['lname'];
+    $last_name=$_POST['fname'];
+    $stream = $_POST['stream'];
+    $str = implode(", ",$stream);
+    $contact=$_POST['number'];
+    $post_image  =  $_FILES['post_image']['name'];
+    $post_image_temp  =  $_FILES['post_image']['tmp_name'];
+    move_uploaded_file($post_image_temp,"../../storage/images/$post_image");
+    include("../includes/db.php");
+    if($dbc)
     {
         echo "database online"."<br>";
     }
@@ -16,8 +20,8 @@ if (isset($_POST['register'])) {
         die("database not online");
     }
 
-    $query_buyer= "INSERT INTO user(email,password,first_name) VALUES('$email','$password','$first_name')";
-    $result = mysqli_query($connection,$query_buyer);
+    $query_buyer= "INSERT INTO user(first_name,last_name,email,password,contact_no,preferences,profilepicpath,role,is_registered) VALUES('$first_name','$last_name','$email','$password','$contact','$str','$post_image','user',1)";
+    $result = mysqli_query($dbc,$query_buyer);
 
     if ($result) 
     {
@@ -25,7 +29,7 @@ if (isset($_POST['register'])) {
     } 
     else 
     {
-        die("Unsuccessful" . mysqli_error($connection));
+        die("Unsuccessful" . mysqli_error($dbc));
     }
     header('Location:login.php');
  

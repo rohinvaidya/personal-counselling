@@ -2,18 +2,18 @@
 
 include('../../includes/db.php');
 
-if (isset($_SESSION))
-{
+// if (isset($_SESSION))
+// {
     echo $_SESSION['id'];
     $college_id = $_GET['college_id'];
     $query="SELECT * FROM colleges where college_id = $college_id";
     $result=mysqli_query($dbc,$query);
     $data=mysqli_fetch_assoc($result);
-}
-else
-{
-    header('Location:../error.php');
-}
+// }
+// else
+// {
+//     header('Location:../error.php');
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
