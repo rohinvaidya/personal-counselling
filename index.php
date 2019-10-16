@@ -114,7 +114,7 @@
                                 <li><a href="#team" class="smooth-scroll">Team</a></li>
                                 <li><a href="#testimonial" class="smooth-scroll">Testimonial</a></li>
                                 <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
-                                <!-- <li><a href="#stats" class="smooth-scroll">Stats</a></li> -->
+                                <li><a href="#stats" class="smooth-scroll">Stats</a></li>
                                 <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                                 <li><a href="pages/login.php">Login/Register</a></li>
                              </ul>
@@ -134,7 +134,7 @@
                             <h2>A Touch Of Care</h2>
                         </div><!--.home-heading-->
                         <div class="home-btn wow animated zoomIn">
-                            <a href="#work" class="btn btn-lg btn-general btn-white smooth-scroll" role="button" title="view Our Work">View our work</a>
+                            <a href="#work" class="btn btn-lg btn-general btn-black smooth-scroll" role="button" title="View Our Work">View Our Work</a>
                         </div>
                     </div><!--.home-content-box-inner-->
                 </div><!--.home-content-box-->
@@ -240,37 +240,26 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row no-gutters wow animate fadeInUp">
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
                                 <a href="assets/project/images/work/one.jpg"><img src="assets/project/images/work/one.jpg" class="img-responsive" alt="">
-                                    <div class="Bottom1">Anxiety</div>
                                  </a>
                             </div>
-                        </div><!--wirk1-->
+                        </div><!--work1-->
                         
-                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <div class="img-wrapper">
-                                <a href="assets/project/images/work/two.jpg"><img src="assets/project/images/work/two.jpg" class="img-responsive" alt="">
-                                    <div class="Bottom2">Detoxification</div>
-                                </a>
-                            </div>
-                        </div><!--wirk1-->
-                        
-                         <div class="col-md-3 col-sm-4 col-xs-6">
+                         <div class="col-md-4 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
                                 <a href="assets/project/images/work/three.jpg"><img src="assets/project/images/work/three.jpg" class="img-responsive" alt="">
-                                    <div class="Bottom3">Depression</div>
                                 </a>
                             </div>
-                        </div><!--wirk1-->
+                        </div><!--work2-->
                         
-                         <div class="col-md-3 col-sm-4 col-xs-6">
+                         <div class="col-md-4 col-sm-4 col-xs-6">
                             <div class="img-wrapper">
                                 <a href="assets/project/images/work/four.jpg"><img src="assets/project/images/work/four.jpg" class="img-responsive" alt="">
-                                    <div class="Bottom4">Stress Management</div>
                                 </a>
                             </div>
-                        </div><!--wirk1-->
+                        </div><!--work3-->
                     </div>
                 </div><!--.container-->
             </div>
@@ -290,10 +279,10 @@
                                 <div class="team-members owl-carousel owl-theme">
                                     
                                     <div class="team-member">
-                                        <img src="assets/project/images/team/team-1.jpg" alt="Team Member 1" class="img-responsive">
+                                        <img src="assets/project/images/team/rohin.jpg" alt="Team Member 1" class="img-responsive">
                                         <div class="team-member-info">
-                                            <h4 class="team-member-name">Daniel Watrous</h4>
-                                            <h4 class="team-member-designation">Counselling Psychologist</h4>
+                                            <h4 class="team-member-name">Rohin Vaidya</h4>
+                                            <h4 class="team-member-designation">Web Developer</h4>
                                             <ul class="social-list">
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
@@ -303,10 +292,10 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="assets/project/images/team/team-2.jpg" alt="Team Member 2" class="img-responsive">
+                                        <img src="assets/project/images/team/shalva.jpeg" alt="Team Member 2" class="img-responsive">
                                         <div class="team-member-info">
-                                            <h4 class="team-member-name">Sara Smith</h4>
-                                            <h4 class="team-member-designation">Psychologist</h4>
+                                            <h4 class="team-member-name">Shalva Thakurdesai</h4>
+                                            <h4 class="team-member-designation">CEO</h4>
                                             <ul class="social-list">
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
@@ -316,9 +305,9 @@
                                     </div><!--team meamber-->
                                     
                                     <div class="team-member">
-                                        <img src="assets/project/images/team/team-3.jpg" alt="Team Member 3" class="img-responsive">
+                                        <img src="assets/project/images/team/shubham.jpeg" alt="Team Member 3" class="img-responsive">
                                         <div class="team-member-info">
-                                            <h4 class="team-member-name">Steve Mike</h4>
+                                            <h4 class="team-member-name">Shubham Vira</h4>
                                             <h4 class="team-member-designation">Clinical Psychologist</h4>
                                             <ul class="social-list">
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
@@ -326,33 +315,7 @@
                                                 <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
                                             </ul>
                                         </div><!--team-member-info-->
-                                    </div><!--team meamber-->
-                                    
-                                    <div class="team-member">
-                                        <img src="assets/project/images/team/team-4.jpg" alt="Team Member 4" class="img-responsive">
-                                        <div class="team-member-info">
-                                            <h4 class="team-member-name">Robert Hinay</h4>
-                                            <h4 class="team-member-designation">Counselor</h4>
-                                            <ul class="social-list">
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div><!--team-member-info-->
-                                    </div><!--team meamber-->
-                                    
-                                    <div class="team-member">
-                                        <img src="assets/project/images/team/team-5.jpg" alt="Team Member 5" class="img-responsive">
-                                        <div class="team-member-info">
-                                            <h4 class="team-member-name">Mike Tera</h4>
-                                            <h4 class="team-member-designation">Industrial Psychologist</h4>
-                                            <ul class="social-list">
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div><!--team-member-info-->
-                                    </div><!--team meamber-->
+                                    </div><!--team meamber-->                              
                                     
                                 </div><!--team meambers-->
                             </div>
@@ -375,7 +338,7 @@
                             <div class="customers-testimonials text-center owl-carousel owl-theme">
 
                                 <div class="testimonial">
-                                    <img src="assets/project/images/client/client-1.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/user-1.png" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
                                         <p>I was struggling with some issues and the platform was so helpful!
                                             The counsellors were patient and understanding!
@@ -383,34 +346,34 @@
                                     </blockquote>
                                     <div class="testimonial-author">
                                         <p>
-                                            <strong>Danial Watrous</strong>
-                                            <span>CEO &amp; Founder - Infomatica</span>
+                                            <strong>Nitesh Prasad</strong>
+                                            <span>ICSE Student</span>
                                         </p>
                                     </div>
                                 </div><!--testimonial-->
 
                                 <div class="testimonial">
-                                    <img src="assets/project/images/client/client-2.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/user-2.png" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
-                                        <p>Being in the It sector can be tough and Convocae have been excellent at Industrial Level Counselling which has given me a very stable workforce to work with</p>
+                                        <p>Convocare helped guide me in the right direction when I was unsure about my future.</p>
                                     </blockquote>
                                     <div class="testimonial-author">
                                         <p>
-                                            <strong>Danial Watrous</strong>
-                                            <span>CEO &amp; Founder - Diamondeer</span>
+                                            <strong>Shivam Yadav</strong>
+                                            <span>HSC Student</span>
                                         </p>
                                     </div>
                                 </div><!--testimonial-->
 
                                 <div class="testimonial">
-                                    <img src="assets/project/images/client/client-3.jpg" alt="testimonial" class="img-responsive img-circle">
+                                    <img src="assets/project/images/client/user-3.png" alt="testimonial" class="img-responsive img-circle">
                                     <blockquote class="text-center">
                                         <p>Convocare has proven to be a reliable partner in helping me in most stressful of my times.</p>
                                     </blockquote>
                                     <div class="testimonial-author">
                                         <p>
-                                            <strong>Danial Watrous</strong>
-                                            <span>CFO - Adani Ltd.</span>
+                                            <strong>Gouri Kanitkar</strong>
+                                            <span>SSC Student</span>
                                         </p>
                                     </div>
                                 </div><!--testimonial-->
@@ -435,13 +398,13 @@
                         <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
                             <div class="pricing-box">
                                 <h4 class="pricing-title">Aptitude Test</h4>
-                                <h3 class="pricing-value">1499<sup>&#8377</sup></h3>
+                                <h3 class="pricing-value">FREE</h3>
                                 <ul class="pricing-spec">
                                     <li><p>Online test</p></li>
                                     <li><p>Carreer Guidance</p></li>
                                 </ul>
                                 <div class="pricing-btn">
-                                    <a href="#" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
+                                    <a href="pages/login.php" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
                                 </div>
                             </div>
                         </div>
@@ -449,7 +412,7 @@
                         <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
                             <div class="pricing-box pricing-box-lg">
                                 <h4 class="pricing-title">Stress Test</h4>
-                                <h3 class="pricing-value">2999<sup>&#8377</sup></h3>
+                                <h3 class="pricing-value">FREE</h3>
                                 <ul class="pricing-spec">
                                     <li><p>Online Test</p></li>
                                     <li>
@@ -463,7 +426,7 @@
                                     </li>
                                 </ul>
                                 <div class="pricing-btn">
-                                    <a href="#" role="button" class="btn btn-lg btn-general btn-white">PURCHASE</a>
+                                    <a href="pages/login.php" role="button" class="btn btn-lg btn-general btn-white">PURCHASE</a>
                                 </div>
                             </div>
                         </div>
@@ -471,7 +434,7 @@
                         <div class="col-md-4 animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
                             <div class="pricing-box">
                                 <h4 class="pricing-title">IQ Test</h4>
-                                <h3 class="pricing-value">499<sup>&#8377</sup></h3>
+                                <h3 class="pricing-value">FREE</h3>
                                 <ul class="pricing-spec">
                                     <li><p></p></li>
                                     <li>
@@ -485,7 +448,7 @@
                                     </li>
                                 </ul>
                                 <div class="pricing-btn">
-                                    <a href="#" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
+                                    <a href="pages/login.php" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
                                 </div>
                             </div>
                         </div>

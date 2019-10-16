@@ -33,13 +33,14 @@ if(isset($_POST['login']))
        {
            header('Location:counsellor.php');
        }
-       else if($data[0]== 'client')
+       else if($data[0]== 'user')
        {
            header('Location:user/user-index.php');
        }
        else
        {
-         echo "Error!!";
+        //  echo "Error!!";
+          header('Location:error.php');
        }
     }
 ?>
@@ -99,7 +100,7 @@ if(isset($_POST['login']))
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="register.php">
+              <a class="nav-link nav-link-icon" href="register.html">
                 <i class="ni ni-circle-08"></i>
                 <span class="nav-link-inner--text">Register</span>
               </a>
@@ -160,11 +161,11 @@ if(isset($_POST['login']))
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col-6">
+            <!-- <div class="col-6">
               <a href="#" class="text-light"><small>Forgot password?</small></a>
-            </div>
-            <div class="col-6 text-right">
-              <a href="#" class="text-light"><small>Create a new account</small></a>
+            </div> -->
+            <div class="col-6 text-left">
+              <a href="register.html" class="text-light"><small>Create a new account</small></a>
             </div>
           </div>
         </div>
