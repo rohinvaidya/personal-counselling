@@ -35,7 +35,7 @@ if(isset($_POST['login']))
        }
        else if($data[0]== 'client')
        {
-           header('Location:user.php');
+           header('Location:user/user-index.php');
        }
        else
        {
