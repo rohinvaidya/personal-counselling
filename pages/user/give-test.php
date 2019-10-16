@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+$test_id=$_GET['test_id'];
+?>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -201,15 +204,19 @@
             <div class="card-body">
                 <h2 class="card-title">Add Question<hr></h2>
                 <!--                MAIN FORM-->
+
                 <form action="submit-test-process.php" method="POST">
+
+                    <input type="hidden" value="<?php echo $test_id;?>" name="test_id">
                     <?php
-                    $test_id=$_GET['test_id'];
+
                     include('../../includes/db.php');
                     $query="SELECT * FROM question_choice where test_id=$test_id";
                     $result=mysqli_query($dbc,$query);
                     $no=0;
                     echo "<form action='test_processing.php' method='POST'>";
                     $i=0;
+
                     while($data=mysqli_fetch_assoc($result))
                     {
                         $i++;
