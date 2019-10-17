@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2019 at 12:48 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Generation Time: Oct 17, 2019 at 04:38 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -80,6 +80,18 @@ CREATE TABLE `question_choice` (
   `correct_answer` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `question_choice`
+--
+
+INSERT INTO `question_choice` (`test_id`, `question_id`, `question`, `option1`, `option2`, `option3`, `option4`, `correct_answer`) VALUES
+(1, 3, 'full form of php', 'personal home page', 'tyuio', 'ertyu', 'nisdbd', 'personal home page'),
+(1, 4, 'qwertyuiop', 'qwerty', 'qwe', 'asdfg', 'zxcvbnm', 'qwerty'),
+(1, 5, 'hello mister', 'miss', 'mr', 'ms', 'mrs', 'mr'),
+(2, 6, 'acnowsncobwoevub', 'ijcoi', 'dncwbc', 'nskdbck', 'jnksvn', 'dncwbc'),
+(2, 7, 'wassup', 'hello', 'rohinn', 'shaco', 'idncnoi', 'rohinn'),
+(2, 8, 'acac', 'asc', 'cccc', 'asca', 'wwdd', 'cccc');
+
 -- --------------------------------------------------------
 
 --
@@ -100,8 +112,17 @@ CREATE TABLE `subcourses` (
 CREATE TABLE `test` (
   `test_id` int(11) NOT NULL,
   `test_name` varchar(255) NOT NULL,
+  `test_description` varchar(255) NOT NULL,
   `is_active` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test`
+--
+
+INSERT INTO `test` (`test_id`, `test_name`, `test_description`, `is_active`) VALUES
+(1, 'IQ', 'shalva is naughtu', 0),
+(2, 'Rohin', 'Rohin is smart', 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +140,7 @@ CREATE TABLE `user` (
   `preferences` varchar(255) DEFAULT NULL,
   `profilepicpath` varchar(255) DEFAULT NULL,
   `role` varchar(255) NOT NULL,
-  `is_registered` int(11) NOT NULL DEFAULT 0
+  `is_registered` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -131,7 +152,7 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `conta
 (2, 'Rohin', 'Vaidya', 'rohin@gmail.com', 'rohin@123', '9876543211', NULL, NULL, 'counsellor', 0),
 (3, 'Shubham', 'Vira', 'shubham@gmail.com', 'shubham@123', '9632587410', 'science', NULL, 'client', 0),
 (4, 'Alex', 'Solanki', 'alex@gmail.com', 'alex@123', '6547893210', 'commerce', NULL, 'client', 0),
-(5, 'Abdullah', 'Khan', 'abdulha@gmail.com', 'abdullah@1243', '9876543210', 'arts', NULL, 'client', 0),
+(5, 'Abdullah', 'Khan', 'abdulha@gmail.com', 'abdullah@1234', '9876543210', 'arts', NULL, 'client', 0),
 (6, 'Tom', 'Snow', 'abc@gmail.com', '1234567890', '9087654321', NULL, NULL, 'counsellor', 1);
 
 -- --------------------------------------------------------
@@ -144,8 +165,29 @@ CREATE TABLE `user_question_answer` (
   `user_id` int(11) NOT NULL,
   `test_id` int(11) NOT NULL,
   `question_id` int(11) NOT NULL,
-  `user_answer` int(11) NOT NULL
+  `user_answer` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_question_answer`
+--
+
+INSERT INTO `user_question_answer` (`user_id`, `test_id`, `question_id`, `user_answer`) VALUES
+(5, 1, 3, 'personal home page'),
+(5, 1, 4, 'qwerty'),
+(5, 1, 5, 'mr'),
+(5, 2, 6, 'dncwbc'),
+(5, 2, 7, 'rohinn'),
+(5, 2, 8, 'cccc'),
+(5, 1, 3, 'personal home page'),
+(5, 1, 4, 'qwerty'),
+(5, 1, 5, 'mr'),
+(5, 1, 3, 'personal home page'),
+(5, 1, 4, 'qwerty'),
+(5, 1, 5, 'mr'),
+(5, 1, 3, 'personal home page'),
+(5, 1, 4, 'qwerty'),
+(5, 1, 5, 'mr');
 
 -- --------------------------------------------------------
 
@@ -157,9 +199,19 @@ CREATE TABLE `user_test` (
   `user_test_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `test_id` int(11) NOT NULL,
-  `has_given` int(11) NOT NULL,
   `score` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_test`
+--
+
+INSERT INTO `user_test` (`user_test_id`, `user_id`, `test_id`, `score`) VALUES
+(1, 5, 1, 2),
+(2, 5, 2, 1),
+(3, 5, 1, 3),
+(4, 5, 1, 3),
+(5, 5, 1, 3);
 
 --
 -- Indexes for dumped tables
@@ -222,13 +274,13 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT for table `question_choice`
 --
 ALTER TABLE `question_choice`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
-  MODIFY `test_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `test_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -240,7 +292,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_test`
 --
 ALTER TABLE `user_test`
-  MODIFY `user_test_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_test_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
