@@ -1,11 +1,19 @@
 <?php
+
+session_start();
+
+$user_id = $_GET['user_id'];
+// die($user_id);
+
+include ("../../includes/db.php");
+
 if (isset($_SESSION))
 {
-    echo $_SESSION['id'];
+    // echo $_SESSION['id'];
 }
 else
 {
-   header('Location:../error.php');
+    header('Location:../error.php');
 }
 ?>
 <!DOCTYPE html>
@@ -15,10 +23,10 @@ else
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+        View Tests of User
     </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../images/w.png">
+    <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -35,7 +43,7 @@ else
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">Home</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">View Users</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -65,17 +73,64 @@ else
     </div>
     <div class="container-fluid mt-5 ">
 
+        <!-- Main Content -->
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">View List of Current Users<hr></h2>
+                <h1 class="h3 mb-2 text-gray-800">Test</h1>
 
-        <!-- Dashboard-->
-        <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="../../assets/project/images/favicon.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  </div>
 
+                <!-- DataTales Code-->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><H2>User Data</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>View Tests of User</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>View Tests of User</th>
+                                </tr>
+                                </tfoot>
+                                <tbody>
+
+                                <?php
+                                    $sql = "SELECT id,first_name,last_name FROM USER
+                                        WHERE ROLE = 'CLIENT'";
+                                $result = mysqli_query($dbc, $sql);
+
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row['id'];
+                                    $name = $row['first_name']." ".$row['last_name'];
+
+                                    echo "<tr>";
+                                    echo "<td>$id</td>";
+                                    echo "<td>$name</td>";
+                                    echo "<td><center><a class='btn btn-primary' href=view-tests.php?user_id=".$id.">View Tests</center></a></td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
 
         <!-- Footer -->
         <footer class="footer">
@@ -109,6 +164,17 @@ else
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
+
+
+<!-- Datatables JS  -->
+<!-- Page level plugins -->
+<script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
+
+
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>

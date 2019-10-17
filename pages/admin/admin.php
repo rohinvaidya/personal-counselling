@@ -1,12 +1,15 @@
 <?php
+
+session_start();
+
 if (isset($_SESSION['id']))
 {
-    echo $_SESSION['id'];
+    $id = $_SESSION['id'];
 }
-// else
-// {
-//     header('Location:../error.php');
-// }
+else
+{
+    header('Location:../error.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

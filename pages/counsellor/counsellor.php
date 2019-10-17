@@ -1,11 +1,14 @@
 <?php
-if (isset($_SESSION))
+
+session_start();
+
+if (isset($_SESSION['id']))
 {
-    echo $_SESSION['id'];
+    $id = $_SESSION['id'];
 }
 else
 {
-   header('Location:../error.php');
+    header('Location:../error.php');
 }
 ?>
 <!DOCTYPE html>
@@ -15,10 +18,10 @@ else
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+        Welcome !
     </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../images/w.png">
+    <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -35,7 +38,7 @@ else
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">Home</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="counsellor.php">Home</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -49,7 +52,7 @@ else
             </form>
             <!-- User -->
             <?php 
-                include('includes/dropdown.php');
+                include("includes/dropdown.php");
             ?>
         </div>
     </nav>
@@ -64,18 +67,28 @@ else
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-
-
-        <!-- Dashboard-->
-        <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="../../assets/project/images/favicon.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  </div>
-
+        <!-- Main Content -->
+    
+        <div class="card card-stats mb-4 mb-lg-0">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                        <span class="h2 font-weight-bold mb-0">350,897</span>
+                    </div>
+                    <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    </div>
+                </div>
+                <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                </p>
+                </div>
+                </div>
+            </div>
 
         <!-- Footer -->
         <footer class="footer">
