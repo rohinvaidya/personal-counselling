@@ -3,6 +3,9 @@
 
 <?php
 $test_id=$_GET['test_id'];
+session_start();
+if (!isset($_SESSION['id']))
+    header('Location:../error.php');
 ?>
 <head>
     <meta charset="utf-8" />

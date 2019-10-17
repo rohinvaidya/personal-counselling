@@ -33,8 +33,7 @@ if(isset($_POST['login']))
        {
            header('Location:counsellor/counsellor.php');
        }
-       else if($data[0]== 'client')
-       {
+       else if($data[0]== 'client') {
            header('Location:user/user-index.php');
        }
        else

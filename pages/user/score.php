@@ -1,12 +1,7 @@
 <?php
-if (isset($_SESSION))
-{
-    echo $_SESSION['id'];
-}
-else
-{
-   // header('Location:../error.php');
-}
+session_start();
+if (!isset($_SESSION['id']))
+    header('Location:../error.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
