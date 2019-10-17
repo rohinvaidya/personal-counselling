@@ -1,19 +1,27 @@
 <?php
 
+session_start();
+
 include('../includes/db.php');
 
 if (isset($_SESSION['id']))
-{
+{  
   $id = $_SESSION['id'];
+  // die($id);
   $query = "SELECT * FROM USER WHERE ID = $id";
   $result = mysqli_query($dbc,$query)
     or die('sql error'.mysqli_error($dbc));
   while( $row = mysqli_fetch_assoc($result)) {
+    $role = $row['role'];
     $first_name = $row['first_name'];
     $last_name = $row['last_name'];
     $email = $row['email'];
     $contact_no = $row['contact_no'];
-    $profilepicpath = $row['profilepicpath'];
+    if(!$row['profilepicpath'] === NULL){
+      $profilepicpath = "../storage/images/".$row['profilepicpath'];
+    }else{
+      $profilepicpath = "../storage/images/R8.jpg";
+    }
   }
 }
 else
@@ -43,108 +51,18 @@ else
 </head>
 
 <body class="">
-  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-    <div class="container-fluid">
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Brand -->
-      <a class="navbar-brand pt-0" href="../index.html">
-        <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-      </a>
-      <!-- User -->
-      <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ni ni-bell-55"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg
-">
-              </span>
-            </div>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-            <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
-            </div>
-            <a href="profile.php" class="dropdown-item">
-              <i class="ni ni-single-02"></i>
-              <span>My profile</span>
-            </a>
-            <a href="profile.php" class="dropdown-item">
-              <i class="ni ni-settings-gear-65"></i>
-              <span>Settings</span>
-            </a>
-            <a href="profile.php" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="profile.php" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="logout.php" class="dropdown-item">
-              <i class="ni ni-user-run"></i>
-              <span>Logout</span>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-        <!-- Collapse header -->
-        <div class="navbar-collapse-header d-md-none">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="../index.html">
-                <img src="../assets/img/brand/blue.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-        <!-- Navigation -->
-        <?php
-          include('user/includes/vertical-nav.php');
-        ?>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Documentation</h6>
-        <!-- Navigation -->
-
-      </div>
-    </div>
-  </nav>
+  <?php
+    $_POST['profile'] = true;
+    if($role == 'admin'){
+      include('admin/includes/vertical-nav.php');
+    }
+    else if($role  == 'counsellor'){
+      include('counsellor/includes/vertical-navbar.php');
+    }
+    else if ($role == 'client'){
+      include('user/includes/vertical-navbar.php');
+    }
+  ?>
   <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -171,7 +89,7 @@ else
                   <img alt="Image placeholder" src="../assets/img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold"><?php echo $first_name." ".$last_name;?></span>
+                  <span class="mb-0 text-sm font-weight-bold"><?php echo " ".$first_name." ".$last_name;?></span>
                 </div>
               </div>
             </a>
@@ -182,18 +100,6 @@ else
               <a href="profile.php" class="dropdown-item">
                 <i class="ni ni-single-02"></i>
                 <span>My profile</span>
-              </a>
-              <a href="profile.php" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
-                <span>Settings</span>
-              </a>
-              <a href="profile.php" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="profile.php" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
               <a href="logout.php" class="dropdown-item">
@@ -207,16 +113,16 @@ else
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(../assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(../assets/project/images/bg-home.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello <?echo $first_name."!";?></h1>
-            <p class="text-white mt-0 mb-5">This is the profile page of <?php echo $first_name." ".$last_name;?></p>
-            <a href="#!" class="btn btn-info">Edit profile</a>
+            <h1 class="display-3 text-white">Hello <?php echo $first_name."!";?></h1>
+            <p class="text-white mt-0 mb-10">This is the profile page of <?php echo $first_name." ".$last_name;?></p>
+            <!-- <a href="#!" class="btn btn-info">Edit profile</a> -->
           </div>
         </div>
       </div>
@@ -230,52 +136,34 @@ else
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    <img src="../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                  <?php
+                    if (isset($profilepicpath)){
+                      echo '<img src='.$profilepicpath.' class="rounded-circle">';
+                    }
+                    else{
+                      echo '<img src="../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">';
+                    }
+                  ?>
                   </a>
                 </div>
               </div>
             </div>
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <!-- This is for buttons -->
               <div class="d-flex justify-content-between">
-                <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
               </div>
             </div>
             <div class="card-body pt-0 pt-md-4">
               <div class="row">
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                    <div>
-                      <span class="heading">22</span>
-                      <span class="description">Friends</span>
-                    </div>
-                    <div>
-                      <span class="heading">10</span>
-                      <span class="description">Photos</span>
-                    </div>
-                    <div>
-                      <span class="heading">89</span>
-                      <span class="description">Comments</span>
-                    </div>
                   </div>
                 </div>
               </div>
               <div class="text-center">
                 <h3>
-                <?php echo $first_name." ".$last_name;?><span class="font-weight-light">, 27</span>
+                <?php echo $first_name." ".$last_name;?><span class="font-weight-light">, 20</span>
                 </h3>
-                <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>Bucharest, Romania
-                </div>
-                <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-                </div>
-                <div>
-                  <i class="ni education_hat mr-2"></i>University of Computer Science
-                </div>
-                <hr class="my-4" />
-                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-                <a href="#">Show more</a>
               </div>
             </div>
           </div>
@@ -285,53 +173,42 @@ else
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">My account</h3>
+                  <h3 class="mb-0">My Account</h3>
                 </div>
-                <div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                </div>
+
               </div>
             </div>
             <div class="card-body">
               <form>
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
-                  <div class="row">
-                  <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-email">Contact No.</label>
-                        <input type="text" value="<?php echo $contact_no;?>" id="input-contact-no" class="form-control form-control-alternative">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" value="<?php echo $email;?>" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
+                <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" value="<?php echo $first_name;?>" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                        <input type="text" value="<?php echo $first_name;?>" id="input-first-name" class="form-control form-control-alternative" disabled>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" value="<?php echo $last_name;?>" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
+                        <input type="text" value="<?php echo $last_name;?>" id="input-last-name" class="form-control form-control-alternative" disabled>
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr class="my-4" />
-                <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">About me</h6>
-                <div class="pl-lg-4">
-                  <div class="form-group">
-                    <label>About Me</label>
-                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                  <div class="row">
+                  <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Contact No.</label>
+                        <input type="text" value="<?php echo $contact_no;?>" id="input-contact-no" class="form-control form-control-alternative" disabled>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" value="<?php echo $email;?>" id="input-email" class="form-control form-control-alternative" disabled>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
