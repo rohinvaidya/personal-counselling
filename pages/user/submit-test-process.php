@@ -31,6 +31,8 @@ if (isset($_POST['submit'])){
         $actual_answer = $_POST[$correct_answer];
         if ($answer == $actual_answer)
             $score++;
+
+//        die($answer);
 //        echo $question_id;
 //
 //        echo "<br>";
@@ -41,7 +43,8 @@ if (isset($_POST['submit'])){
 //        echo $actual_answer;
 //        echo "<br>";
 
-        $query1="INSERT into user_question_answer(user_id, test_id,question_id,user_answer) values ($user_id, $test_id,$question_id,'$actual_answer')";
+        $query1="INSERT into user_question_answer(user_id, test_id,question_id,user_answer) values ($user_id, $test_id,$question_id,'$answer')";
+        //die($query1);
 
         $result=mysqli_query($dbc,$query1);
 
