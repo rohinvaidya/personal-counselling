@@ -4,14 +4,8 @@ session_start();
 
 include ("../../includes/db.php");
 
-if (isset($_SESSION))
-{
-    // echo $_SESSION['id'];
-}
-else
-{
+if (!isset($_SESSION['id']))
     header('Location:../error.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
