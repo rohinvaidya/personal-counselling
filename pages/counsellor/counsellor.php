@@ -1,10 +1,17 @@
 <?php
 
 session_start();
+include('../../includes/db.php');
 
 if (isset($_SESSION['id']))
 {
     $id = $_SESSION['id'];
+    $query = "SELECT COUNT(*) FROM USER
+        WHERE ROLE= 'CLIENT'";
+
+    $answer = mysqli_query($dbc,$query);
+    $result = mysqli_fetch_array($answer);
+    $count = $result[0];
 }
 else
 {
@@ -18,7 +25,7 @@ else
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Welcome !
+        Dashboard
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -73,8 +80,8 @@ else
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
-                        <span class="h2 font-weight-bold mb-0">350,897</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Total Number of Users</h5>
+                        <span class="h2 font-weight-bold mb-0"><?php echo $count;?></span>
                     </div>
                     <div class="col-auto">
                     <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
