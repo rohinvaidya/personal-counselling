@@ -1,12 +1,16 @@
 <?php
+
+session_start();
+
 if (isset($_SESSION['id']))
 {
-    echo $_SESSION['id'];
+    $id = $_SESSION['id'];
 }
-// else
-// {
-//     header('Location:../error.php');
-// }
+else
+{
+    header('Location:../error.php');
+}
+
 include("../../includes/db.php");
 //count of colleges
 $colleges="SELECT COUNT(*) FROM colleges";  
@@ -25,7 +29,6 @@ $client="SELECT COUNT(*) FROM user where role='client'";
 $result_client = mysqli_query($dbc,$client);
 $count_client_array=mysqli_fetch_row($result_client);
 $count_client=$count_client_array['0'];
-echo $count_client;
 ?>
 <!DOCTYPE html>
 <html lang="en">

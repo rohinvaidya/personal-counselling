@@ -1,18 +1,11 @@
 <?php
+
 session_start();
-if (!isset($_SESSION['id'])){
-  header('Location:../error.php');}
 
-$user_id=$_SESSION['id'];
-include("../../includes/db.php");
-$query_college="SELECT * from colleges";
-$result_college=mysqli_query($dbc,$query_college);
-$query_preferance="SELECT preferences from user where id='$user_id'";
-$result_preferance=mysqli_query($dbc,$query_preferance);
-$user_pref=mysqli_fetch_row($result_preferance);
-$pref=$user_pref[0];
-$user=explode(", ",$pref);
+include ("../../includes/db.php");
 
+if (!isset($_SESSION['id']))
+    header('Location:../error.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +14,10 @@ $user=explode(", ",$pref);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+        View Users
     </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../images/w.png">
+    <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -41,7 +34,7 @@ $user=explode(", ",$pref);
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">Home</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">View Users</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -71,42 +64,64 @@ $user=explode(", ",$pref);
     </div>
     <div class="container-fluid mt-5 ">
 
+        <!-- Main Content -->
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">View List of Current Users<hr></h2>
+                <h1 class="h3 mb-2 text-gray-800">Test</h1>
 
-        <!-- Dashboard-->
-        <?php 
-        echo "<div class='row'>";
-        while($data=mysqli_fetch_assoc($result_college))
-        {
-            $college_streams=$data['stream'];
-            $stream=explode(", ",$college_streams);
-            $intersect=array_intersect($stream,$user);
-            if(!empty($intersect))
-            {
-                $post_image = $data['image'];
-                $name=$data['college_name'];
-                $streams=$data['stream'];
-                $description=$data['description'];
-                $address=$data['address'];
-                $contact = $data['contact_no'];
-                $college_id=$data['college_id'];
-                echo<<<ROW
-                <div class="card ml-6 mb-4"style="width: 20rem;">
-                    <img class="card-img-top" src='../../storage/images/$post_image' height='200'  alt=''>
+
+                <!-- DataTales Code-->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><H2>User Data</h6>
+                    </div>
                     <div class="card-body">
-                    <h4 class="card-title">$name</h4>
-                    <p class="card-text">$description</p>
-                    <h5>Contact<h5>
-                    <p>$contact</p>
-                    <h5>Address<h5>
-                    <p>$address</p>
-                    <h5>Streams<h5>
-                    <p>$streams</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>View Tests of User</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>View Tests of User</th>
+                                </tr>
+                                </tfoot>
+                                <tbody>
+
+                                <?php
+                                    $sql = "SELECT id,first_name,last_name FROM USER
+                                        WHERE ROLE = 'CLIENT'";
+                                $result = mysqli_query($dbc, $sql);
+
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row['id'];
+                                    $name = $row['first_name']." ".$row['last_name'];
+
+                                    echo "<tr>";
+                                    echo "<td>$id</td>";
+                                    echo "<td>$name</td>";
+                                    echo "<td><center><a class='btn btn-primary' href=view-tests.php?user_id=".$id.">View Tests</center></a></td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                ROW;
-            }
-        }echo "</div>";
-        ?>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
 
         <!-- Footer -->
         <footer class="footer">
@@ -140,6 +155,17 @@ $user=explode(", ",$pref);
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
+
+
+<!-- Datatables JS  -->
+<!-- Page level plugins -->
+<script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
+
+
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>

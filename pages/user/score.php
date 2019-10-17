@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
-$test_id=$_GET['test_id'];
 session_start();
 if (!isset($_SESSION['id']))
     header('Location:../error.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -199,112 +198,37 @@ if (!isset($_SESSION['id']))
             </div>
         </div>
     </div>
-
-
     <div class="container-fluid mt-5 ">
-        <!-- Main Content -->
+
+
+        <!-- Dashboard-->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">Add Question<hr></h2>
-                <!--                MAIN FORM-->
 
-                <form action="submit-test-process.php" method="POST">
+                <br><br>
 
-                    <input type="hidden" value="<?php echo $test_id;?>" name="test_id">
-                    <?php
 
-                    include('../../includes/db.php');
-                    $query="SELECT * FROM question_choice where test_id=$test_id";
-                    $result=mysqli_query($dbc,$query);
-                    $no=0;
-                    echo "<form action='test_processing.php' method='POST'>";
-                    $i=0;
-
-                    while($data=mysqli_fetch_assoc($result))
-                    {
-                        $i++;
-                        $question_id= $data['question_id'];
-                        $question= $data['question'];
-                        $opt1=$data['option1'];
-                        $opt2=$data['option2'];
-                        $opt3=$data['option3'];
-                        $opt4=$data['option4'];
-                        $correct_answer = $data['correct_answer'];
-                        echo<<<ROW
-                            <input type="hidden" value="$question_id" name="question_id_$i">
-                            <input type="hidden"value="$correct_answer" name="correct_answer_$i">
-                          <div class="row ml-4">
-                                <div class="col-md-8">
-                                    <label>$i. $question<label></br>
-                                </div>
-                            </div>
-                          
-                            <div class="row ml-6">
-                                <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="options_$i" value="$opt1" class="custom-control-input" required id="option1-$i" type="radio">
-                                    <label class="custom-control-label" for="option1-$i">$opt1</label>
-                                </div>
-
-                                <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="options_$i" value="$opt2" class="custom-control-input" required id="option2-$i" type="radio">
-                                    <label class="custom-control-label" for="option2-$i">$opt2</label>
-                                </div>
-                            </div>    
-
-                            <div class="row ml-6">
-                                <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="options_$i" value="$opt3" class="custom-control-input" required id="option3-$i" type="radio">
-                                    <label class="custom-control-label" for="option3-$i">$opt3</label>
-                                </div>
-
-                                <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="options_$i" value="$opt4" class="custom-control-input" required id="option4-$i" type="radio">
-                                    <label class="custom-control-label" for="option4-$i">$opt4</label>
-                                </div>
-                            </div>    
-ROW;
-                    }
-                    ?>
-                    <?php echo "<input type='hidden' name='i_value' value='$i'"; ?>
-                    <div class="row">
-                        <div class="col-md-3 ml-7 mt-4" >
-                            <div class="form-group">
-                                <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Submit test" >
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <!--                END OF FORM-->
-
-            </div>
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="row align-items-center justify-content-xl-between">
-                    <div class="col-xl-6">
-                        <div class="copyright text-center text-xl-left text-muted">
-                            &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                            </li>
-                        </ul>
+                <div class="row">
+                    <div class="col-md-4 center">
+                        <p class="display-2">Your Score!</p>
                     </div>
                 </div>
-            </footer>
+                <div class="row">
+                    <div class="col-md-2 center">
+                        <p class="display-2"><?php echo $_GET['score']; ?></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 center ml-6 mt-2">
+                        <a href="user-index.php" class="btn btn-primary col-md-6">Next</a>
+                    </div>
+                </div>
+
+                <br><br>
+
+            </div>
         </div>
-    </div>
 
 
         <!-- Footer -->

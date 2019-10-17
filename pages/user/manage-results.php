@@ -2,10 +2,16 @@
 <html lang="en">
 
 <?php
-$test_id=$_GET['test_id'];
+include ("../../includes/db.php");
 session_start();
-if (!isset($_SESSION['id']))
+if (isset($_SESSION['id']))
+{
+    $user_id = $_SESSION['id'];
+}
+else
+{
     header('Location:../error.php');
+}
 ?>
 <head>
     <meta charset="utf-8" />
@@ -205,77 +211,46 @@ if (!isset($_SESSION['id']))
         <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">Add Question<hr></h2>
-                <!--                MAIN FORM-->
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Test name</th>
+                            <th>Score</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Test name</th>
+                            <th>Score</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
 
-                <form action="submit-test-process.php" method="POST">
+                        <?php
+                        $sql = "SELECT `test_id`, `score` FROM `user_test` WHERE user_id = $user_id";
+                        $result = mysqli_query($dbc, $sql);
 
-                    <input type="hidden" value="<?php echo $test_id;?>" name="test_id">
-                    <?php
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $test_id = $row['test_id'];
+                            $res = mysqli_query($dbc, "SELECT test_name FROM test WHERE test_id = $test_id");
+                            $rw = mysqli_fetch_assoc($res);
+                            $test_name = $rw['test_name'];
 
-                    include('../../includes/db.php');
-                    $query="SELECT * FROM question_choice where test_id=$test_id";
-                    $result=mysqli_query($dbc,$query);
-                    $no=0;
-                    echo "<form action='test_processing.php' method='POST'>";
-                    $i=0;
+                            $score = $row['score'];
 
-                    while($data=mysqli_fetch_assoc($result))
-                    {
-                        $i++;
-                        $question_id= $data['question_id'];
-                        $question= $data['question'];
-                        $opt1=$data['option1'];
-                        $opt2=$data['option2'];
-                        $opt3=$data['option3'];
-                        $opt4=$data['option4'];
-                        $correct_answer = $data['correct_answer'];
-                        echo<<<ROW
-                            <input type="hidden" value="$question_id" name="question_id_$i">
-                            <input type="hidden"value="$correct_answer" name="correct_answer_$i">
-                          <div class="row ml-4">
-                                <div class="col-md-8">
-                                    <label>$i. $question<label></br>
-                                </div>
-                            </div>
-                          
-                            <div class="row ml-6">
-                                <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="options_$i" value="$opt1" class="custom-control-input" required id="option1-$i" type="radio">
-                                    <label class="custom-control-label" for="option1-$i">$opt1</label>
-                                </div>
+                            echo "<tr>";
+                            echo "<td>$test_name</td>";
 
-                                <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="options_$i" value="$opt2" class="custom-control-input" required id="option2-$i" type="radio">
-                                    <label class="custom-control-label" for="option2-$i">$opt2</label>
-                                </div>
-                            </div>    
+                            echo "<td>$score</td>";
+                            echo "</tr>";
+                        }
 
-                            <div class="row ml-6">
-                                <div class="custom-control custom-radio mb-3 col-md 6">
-                                    <input name="options_$i" value="$opt3" class="custom-control-input" required id="option3-$i" type="radio">
-                                    <label class="custom-control-label" for="option3-$i">$opt3</label>
-                                </div>
 
-                                <div class="custom-control custom-radio mb-3 col-md-6">
-                                    <input name="options_$i" value="$opt4" class="custom-control-input" required id="option4-$i" type="radio">
-                                    <label class="custom-control-label" for="option4-$i">$opt4</label>
-                                </div>
-                            </div>    
-ROW;
-                    }
-                    ?>
-                    <?php echo "<input type='hidden' name='i_value' value='$i'"; ?>
-                    <div class="row">
-                        <div class="col-md-3 ml-7 mt-4" >
-                            <div class="form-group">
-                                <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Submit test" >
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <!--                END OF FORM-->
-
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- Footer -->
             <footer class="footer">
@@ -339,6 +314,12 @@ ROW;
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
+
+<script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>

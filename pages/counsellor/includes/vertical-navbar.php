@@ -77,64 +77,13 @@
             </form>
             <!-- Navigation -->
             <ul class="navbar-nav">
-                <li class="nav-item  class=' active' ">
-                <a class=" nav-link " href="admin.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <li class="nav-item" class=" active">
+                <a class=" nav-link " href="user-index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-hat-3 text-primary"></i>
-                        <span class="nav-link-text">Counsellors</span>
-                    </a>
-
-                    <div class="collapse" id="navbar-counsellors">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="add-counsellors.php" class="nav-link">Add Counsellors</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="manage-counsellors.php" class="nav-link">Manage Counsellors</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#navbar-tests" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-books text-primary"></i>
-                        <span class="nav-link-text">Tests</span>
-                    </a>
-
-                    <div class="collapse" id="navbar-tests">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="add-test.php" class="nav-link">Add Tests</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="manage-test.php" class="nav-link">Manage Tests</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#navbar-colleges" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-square-pin text-primary"></i>
-                        <span class="nav-link-text">Colleges</span>
-                    </a>
-
-                    <div class="collapse" id="navbar-colleges">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="add-colleges.php" class="nav-link">Add Colleges</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="manage-colleges.php" class="nav-link">Manage Colleges</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../profile.html">
-                        <i class="ni ni-single-02 text-yellow"></i> User profile
+                    <a class="nav-link " href="#">
+                        <i class="ni ni-planet text-blue"></i>Fill in Later
                     </a>
                 </li>
             </ul>
