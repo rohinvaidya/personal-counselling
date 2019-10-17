@@ -33,7 +33,7 @@ if(isset($_POST['login']))
        {
            header('Location:counsellor.php');
        }
-       else if($data[0]== 'user')
+       else if($data[0]== 'client')
        {
            header('Location:user/user-index.php');
        }
@@ -99,7 +99,7 @@ if(isset($_POST['login']))
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="register.php">
+              <a class="nav-link nav-link-icon" href="register.html">
                 <i class="ni ni-circle-08"></i>
                 <span class="nav-link-inner--text">Register</span>
               </a>

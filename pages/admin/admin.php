@@ -7,6 +7,25 @@ if (isset($_SESSION['id']))
 // {
 //     header('Location:../error.php');
 // }
+include("../../includes/db.php");
+//count of colleges
+$colleges="SELECT COUNT(*) FROM colleges";  
+$result_colleges = mysqli_query($dbc,$colleges);
+$count_colleges_array=mysqli_fetch_row($result_colleges);
+$count_colleges=$count_colleges_array['0'];
+
+//count of counsellors
+$counsellor="SELECT COUNT(*) FROM user where role='counsellor'";  
+$result_counsellor = mysqli_query($dbc,$counsellor);
+$count_counsellor_array=mysqli_fetch_row($result_counsellor);
+$count_counsellor=$count_counsellor_array['0'];
+
+//count of clients
+$client="SELECT COUNT(*) FROM user where role='client'";  
+$result_client = mysqli_query($dbc,$client);
+$count_client_array=mysqli_fetch_row($result_client);
+$count_client=$count_client_array['0'];
+echo $count_client;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,14 +84,59 @@ if (isset($_SESSION['id']))
     </div>
     <div class="container-fluid mt-5 ">
         <!-- Main Content -->
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../assets/img/theme/team-1-800x800.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        <div class='row'>
+        <!-- For Colleges -->
+
+        <div class="col-md-4">
+                                <div class="card card-stats mb-4 mb-lg-0">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Number of Colleges</h5>
+                                                <span class="h2 font-weight-bold mb-0"><?php echo $count_colleges;?></span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 text-muted text-sm">
+                                            <span class="text-nowrap"><a href='manage-colleges.php'><button class="btn btn-primary" type="button">Manage Colleges</button></a></span>
+                                        </p>
+                                    </div>
+                                </div>
+         </div>
+
+         <!--For counsellors -->
+         <div class="col-md-4">
+                                <div class="card card-stats mb-4 mb-lg-0">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Number of CounsellorS</h5>
+                                                <span class="h2 font-weight-bold mb-0"><?php echo $count_counsellor;?></span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 text-muted text-sm">
+                                            <span class="text-nowrap"><a href='manage-counsellors.php'><button class="btn btn-primary" type="button">Manage Counsellors</button></a></span>
+                                        </p>
+                                    </div>
+                                </div>
+         </div>
+
+        <!-- For Clients -->
+        <div class="col-md-4">
+                                <div class="card card-stats mb-4 mb-lg-0">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title text-uppercase text-muted mb-0">Number of Clients</h5>
+                                                <span class="h2 font-weight-bold mb-0"><?php echo $count_client;?></span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 text-muted text-sm">
+                                            <span class="text-nowrap"><a href=''><button class="btn btn-primary" type="button">Manage Clients</button></a></span>
+                                        </p>
+                                    </div>
+                                </div>
+         </div>
+        </div>                 
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">

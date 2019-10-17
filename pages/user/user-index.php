@@ -1,12 +1,14 @@
 <?php
-if (isset($_SESSION))
-{
-    echo $_SESSION['id'];
-}
-else
-{
-   // header('Location:../error.php');
-}
+session_start();
+$user_id=$_SESSION['id'];
+include("../../includes/db.php");
+$query_college="SELECT * from colleges";
+$result_college=mysqli_query($dbc,$query_college);
+$query_preferance="SELECT preferences from user where id='$user_id'";
+$result_preferance=mysqli_query($dbc,$query_preferance);
+$user_pref=mysqli_fetch_row($result_preferance);
+$pref=$user_pref[0];
+$user=explode(", ",$pref);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -207,15 +209,40 @@ else
 
 
         <!-- Dashboard-->
-        <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="../../assets/project/images/favicon.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  </div>
-
+        <?php 
+        echo "<div class='row'>";
+        while($data=mysqli_fetch_assoc($result_college))
+        {
+            $college_streams=$data['stream'];
+            $stream=explode(", ",$college_streams);
+            $intersect=array_intersect($stream,$user);
+            if(!empty($intersect))
+            {
+                $post_image = $data['image'];
+                $name=$data['college_name'];
+                $streams=$data['stream'];
+                $description=$data['description'];
+                $address=$data['address'];
+                $contact = $data['contact_no'];
+                $college_id=$data['college_id'];
+                echo<<<ROW
+                <div class="card ml-6 mb-4"style="width: 20rem;">
+                    <img class="card-img-top" src='../../storage/images/$post_image' height='200'  alt=''>
+                    <div class="card-body">
+                    <h4 class="card-title">$name</h4>
+                    <p class="card-text">$description</p>
+                    <h5>Contact<h5>
+                    <p>$contact</p>
+                    <h5>Address<h5>
+                    <p>$address</p>
+                    <h5>Streams<h5>
+                    <p>$streams</p>
+                    </div>
+                </div>
+                ROW;
+            }
+        }echo "</div>";
+        ?>
 
         <!-- Footer -->
         <footer class="footer">
