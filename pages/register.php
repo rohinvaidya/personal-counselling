@@ -2,8 +2,8 @@
 if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $first_name=$_POST['lname'];
-    $last_name=$_POST['fname'];
+    $first_name=$_POST['fname'];
+    $last_name=$_POST['lname'];
     $stream = $_POST['stream'];
     $str = implode(", ",$stream);
     $contact=$_POST['number'];
@@ -20,7 +20,7 @@ if (isset($_POST['register'])) {
         die("database not online");
     }
 
-    $query_buyer= "INSERT INTO user(first_name,last_name,email,password,contact_no,preferences,profilepicpath,role,is_registered) VALUES('$first_name','$last_name','$email','$password','$contact','$str','$post_image','user',1)";
+    $query_buyer= "INSERT INTO user(first_name,last_name,email,password,contact_no,preferences,profilepicpath,role,is_registered) VALUES('$first_name','$last_name','$email','$password','$contact','$str','$post_image','client',1)";
     $result = mysqli_query($dbc,$query_buyer);
 
     if ($result) 

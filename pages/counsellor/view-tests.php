@@ -2,19 +2,13 @@
 
 session_start();
 
-$user_id = $_GET['user_id'];
+$student_user_id = $_GET['user_id'];
 // die($user_id);
 
 include ("../../includes/db.php");
 
-if (isset($_SESSION))
-{
-    // echo $_SESSION['id'];
-}
-else
-{
+if (!isset($_SESSION['id']))
     header('Location:../error.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,31 +86,29 @@ else
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>View Tests of User</th>
+<!--                                    <th>View Tests of User</th>-->
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>View Tests of User</th>
+                                    <th>Test Name</th>
+                                    <th>View Details</th>
+<!--                                    <th>View Tests of User</th>-->
                                 </tr>
                                 </tfoot>
                                 <tbody>
 
                                 <?php
-                                    $sql = "SELECT id,first_name,last_name FROM USER
-                                        WHERE ROLE = 'CLIENT'";
+                                $sql = "SELECT test.test_name, test.test_id from test INNER JOIN user_test on user_test.test_id = test.test_id and user_test.user_id = $student_user_id";
                                 $result = mysqli_query($dbc, $sql);
 
                                 while($row = mysqli_fetch_assoc($result)) {
-                                    $id = $row['id'];
-                                    $name = $row['first_name']." ".$row['last_name'];
+                                    $test_name = $row['test_name'];
+                                    $test_id = $row['test_id'];
 
                                     echo "<tr>";
-                                    echo "<td>$id</td>";
-                                    echo "<td>$name</td>";
-                                    echo "<td><center><a class='btn btn-primary' href=view-tests.php?user_id=".$id.">View Tests</center></a></td>";
+                                    echo "<td>$test_name</td>";
+                                    echo "<td><a href='view-test-details.php?test_id=$test_id&user_id=$student_user_id' class='btn btn btn-primary'>view details</a></td>";
                                     echo "</tr>";
                                 }
                                 ?>
