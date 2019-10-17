@@ -1,12 +1,15 @@
 <?php
+
+session_start();
+
 if (isset($_SESSION))
 {
-    echo $_SESSION['id'];
+    // echo $_SESSION['id'];
 }
 else
-// {
-//     header('Location:../error.php');
-// }
+{
+    header('Location:../error.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,17 +39,13 @@ else
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="../../index.html">
+        <a class="navbar-brand pt-0" href="admin.php">
             <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
-        <!-- User -->
-        <?php 
-                include('includes/dropdown.php');
-        ?>
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
             <!-- Collapse header -->
-            <div class="navbar-collapse-header d-md-none">
+            <!-- <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="../../index.html">
@@ -60,7 +59,7 @@ else
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Form -->
             <form class="mt-4 mb-3 d-md-none">
                 <div class="input-group input-group-rounded input-group-merge">
@@ -78,11 +77,6 @@ else
                 <a class=" nav-link " href="admin.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                        <i class="ni ni-calendar-grid-58 text-primary"></i>
-                        <span class="nav-link-text">Counsellors</span>
-                    </a>
                     <li class="nav-item">
                     <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
@@ -172,46 +166,9 @@ else
                 </div>
             </form>
             <!-- User -->
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
-                <li class="nav-item dropdown">
-                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
-                </span>
-                            <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                        <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome!</h6>
-                        </div>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
-                        </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-settings-gear-65"></i>
-                            <span>Settings</span>
-                        </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-calendar-grid-58"></i>
-                            <span>Activity</span>
-                        </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-support-16"></i>
-                            <span>Support</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#!" class="dropdown-item">
-                            <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
+            <?php 
+                include('includes/dropdown.php');
+            ?>
         </div>
     </nav>
     <!-- End Navbar -->

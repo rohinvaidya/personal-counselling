@@ -5,9 +5,23 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="admin.php">
-            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-        </a>
+        <?php 
+            if(isset($_POST['profile']) && $_POST['profile'] == true){
+                echo '
+                <a class="navbar-brand pt-0" href="user/user-index.php">
+                    <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                </a>
+                ';
+                $_POST['profile'] = false;
+            }
+            else{
+                echo '
+                <a class="navbar-brand pt-0" href="user-index.php">
+                    <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                </a>
+                ';                
+            }
+        ?>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
@@ -34,7 +48,7 @@
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">Welcome!</h6>
                     </div>
-                    <a href="./examples/profile.html" class="dropdown-item">
+                    <a href="../profile.php" class="dropdown-item">
                         <i class="ni ni-single-02"></i>
                         <span>My profile</span>
                     </a>
@@ -82,7 +96,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                    <a class="nav-link" href="#navbar-counsellors" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                         <i class="ni ni-hat-3 text-primary"></i>
                         <span class="nav-link-text">Counsellors</span>
                     </a>
@@ -99,7 +113,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-tests" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                    <a class="nav-link" href="#navbar-tests" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                         <i class="ni ni-books text-primary"></i>
                         <span class="nav-link-text">Tests</span>
                     </a>
@@ -116,7 +130,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-colleges" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                    <a class="nav-link" href="#navbar-colleges" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                         <i class="ni ni-square-pin text-primary"></i>
                         <span class="nav-link-text">Colleges</span>
                     </a>
@@ -133,8 +147,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../profile.html">
-                        <i class="ni ni-single-02 text-yellow"></i> User profile
+                    <a class="nav-link " href="../profile.php">
+                        <i class="ni ni-single-02 text-yellow"></i> User Profile
                     </a>
                 </li>
             </ul>
