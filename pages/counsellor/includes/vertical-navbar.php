@@ -92,7 +92,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item" class=" active">
-                <a class=" nav-link " href="user-index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <a class=" nav-link " href="counsellor.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
                 </li>
                 <li class="nav-item">
