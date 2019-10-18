@@ -4,6 +4,7 @@ include('../../includes/db.php');
 
 // if (isset($_SESSION))
 // {
+session_start();
     echo $_SESSION['id'];
     $college_id = $_GET['college_id'];
     $query="SELECT * FROM colleges where college_id = $college_id";

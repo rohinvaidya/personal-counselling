@@ -85,7 +85,7 @@ else
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" required id="description" name="description" rows="3" placeholder="Write a large text here ..."></textarea>
+                                <textarea class="form-control" required id="description" name="description" rows="3" placeholder="Describe the test"></textarea>
                             </div>
                         </div>
                     </div>
