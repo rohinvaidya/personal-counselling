@@ -213,7 +213,7 @@ else
         <!-- Dashboard-->
         <?php
              include('../../includes/db.php');
-             $query="SELECT * FROM test";
+             $query="SELECT * FROM test where is_active= 1";
              $result=mysqli_query($dbc,$query);
              echo "<div class='row'>";
                       while($data=mysqli_fetch_assoc($result))

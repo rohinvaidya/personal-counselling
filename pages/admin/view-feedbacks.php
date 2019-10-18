@@ -30,7 +30,7 @@ $user_id = $_SESSION['id'];
 </head>
 
 <body class="">
-<?php include("includes/vertical-navbar.php");?>
+<?php include("includes/vertical-nav.php");?>
 <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -84,27 +84,33 @@ $user_id = $_SESSION['id'];
                                 <thead>
                                 <tr>
                                     <th>Sr no.</th>
+                                    <th>By User</th>
                                     <th>Feedback</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th>Sr no.</th>
+                                    <th>By User</th>
                                     <th>Feedback</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
 
                                 <?php
-                                    $sql = "SELECT feedback from feedback";
+                                    $sql = "SELECT user.first_name, user.last_name, feedback.feedback from user INNER join feedback on user.id = feedback.user_id";
                                 $result = mysqli_query($dbc, $sql);
                                 $i=1;
 
                                 while($row = mysqli_fetch_assoc($result)) {
+                                    $first_name = $row['first_name'];
+                                    $last_name = $row['last_name'];
                                     $feedback= $row['feedback'];
+
 
                                     echo "<tr>";
                                     echo "<td>$i</td>";
+                                    echo "<td>$first_name $last_name</td>";
                                     echo "<td>$feedback</td>";
                                     echo "</tr>";
                                     $i++;
