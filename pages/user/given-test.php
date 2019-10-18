@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-
 <?php
 session_start();
-if (isset($_SESSION['id']))
-{
-    $user_id = $_SESSION['id'];
-}
-else
-{
+if (!isset($_SESSION['id']))
     header('Location:../error.php');
-}
 ?>
-
-
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -211,40 +202,28 @@ else
 
 
         <!-- Dashboard-->
-        <?php
-             include('../../includes/db.php');
-             $query="SELECT * FROM test";
-             $result=mysqli_query($dbc,$query);
-             echo "<div class='row'>";
-                      while($data=mysqli_fetch_assoc($result))
-                      {
-                          $name= $data['test_name'];
-                          $test_id=$data['test_id'];
-                          $description=$data['test_description'];
-                          echo<<<ROW
-                            <div class="col-md-4">
-                                <div class="card card-stats mb-4 mb-lg-0">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col">
-                                                <h5 class="card-title text-uppercase text-muted mb-0">$name</h5>
-                                                <span class="h2 font-weight-bold mb-0">$description</span>
-                                            </div>
-                                        </div>
-                                        <p class="mt-3 mb-0 text-muted text-sm">
-                                            <span class="text-nowrap"><a href='check-test.php?test_id=$test_id&user_id=$user_id'><button class="btn btn-primary" type="button">Give Test</button></a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                          
-ROW;
-                      }
-                      echo "</div>"
-                  ?>
-    
-    
-    </div>
+        <div class="card">
+            <div class="card-body">
+
+                <br><br>
+
+
+                <div class="row">
+                    <div class="col-md-9 center">
+                        <p class="display-2">You have already given this test!</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 center ml-6 mt-2">
+                        <a href="test.php" class="btn btn-primary col-md-6">Next</a>
+                    </div>
+                </div>
+
+                <br><br>
+
+            </div>
+        </div>
 
 
         <!-- Footer -->
