@@ -114,7 +114,6 @@
                                 <li><a href="#team" class="smooth-scroll">Team</a></li>
                                 <li><a href="#testimonial" class="smooth-scroll">Testimonial</a></li>
                                 <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
-                                <li><a href="#stats" class="smooth-scroll">Stats</a></li>
                                 <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                                 <li><a href="pages/login.php">Login/Register</a></li>
                              </ul>
@@ -401,7 +400,7 @@
                                 <h3 class="pricing-value">FREE</h3>
                                 <ul class="pricing-spec">
                                     <li><p>Online test</p></li>
-                                    <li><p>Carreer Guidance</p></li>
+                                    <li><p>Career Guidance</p></li>
                                 </ul>
                                 <div class="pricing-btn">
                                     <a href="pages/login.php" role="button" class="btn btn-lg btn-general btn-blue">PURCHASE</a>
@@ -458,56 +457,7 @@
             </div><!--.content-->
         </section>
         <!--END OF PRICING TABLE SECTION-->
-        
-        <!--STATS Section-->
-        <section id="stats">
-            <div class="stats-cover bg-parralex">
-                <div class="content-box">
-                    <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h3 class="content-title-white">We never stop improving</h3>
-                        <div class="content-title-underline"></div>
-                    </div><!--Content-title-->
-                    <div class="container">
-                        <div class="row wow animated fadeInUp text-center" data-wow-duration="1s" data-wow-delay="0.2s">
-                            
-                            <div class="col-md-3">
-                                <div class="stats-item">
-                                    <i class="fa fa-star-o fa-5x"></i>
-                                    <h2><span class="counter">6</span></h2>
-                                    <p>awards</p>
-                                </div>
-                            </div><!--cols-->
-                            
-                            <div class="col-md-3">
-                                <div class="stats-item">
-                                    <i class="fa fa-heart-o fa-5x"></i>
-                                    <h2><span class="counter">1590</span>+</h2>
-                                    <p>likes</p>
-                                </div>
-                            </div><!--cols-->
-                            
-                            <div class="col-md-3">
-                                <div class="stats-item">
-                                    <i class="fa fa-check fa-5x"></i>
-                                    <h2><span class="counter">1097</span>+</h2>
-                                    <p>recommended</p>
-                                </div>
-                            </div><!--cols-->
 
-                            <div class="col-md-3">
-                                <div class="stats-item">
-                                    <i class="fa fa-user-circle-o fa-5x"></i>
-                                    <h2><span class="counter">1980</span>+</h2>
-                                    <p>Users</p>
-                                </div>
-                            </div><!--cols-->
-                            
-                        </div><!--row-->
-                    </div><!--.container-->
-                </div><!--.content-->
-            </div>
-        </section>
-        <!--END OF  SECTION--> 
         
         <!--FOOTER-->
         <footer id="contact">

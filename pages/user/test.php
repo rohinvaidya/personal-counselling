@@ -80,6 +80,7 @@ else
                     </div>
                 </li>
             </ul>
+
         </div>
     </nav>
     <!-- End Navbar -->
@@ -98,7 +99,7 @@ else
         <!-- Dashboard-->
         <?php
              include('../../includes/db.php');
-             $query="SELECT * FROM test";
+             $query="SELECT * FROM test where is_active= 0";
              $result=mysqli_query($dbc,$query);
              echo "<div class='row'>";
                       while($data=mysqli_fetch_assoc($result))
