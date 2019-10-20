@@ -47,8 +47,7 @@ if(isset($_POST['login']))
        }
        else
        {
-          echo "Error!! You have entered the wrong credentials!";
-          // header('Location:error.php');
+          header('Location:login-error.php');
        }
     }
 ?>
