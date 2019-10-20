@@ -2,7 +2,7 @@
 
 session_start();
 
-include('../includes/db.php');
+include('../../includes/db.php');
 
 if (isset($_SESSION['id']))
 {  
@@ -16,11 +16,6 @@ if (isset($_SESSION['id']))
     $last_name = $row['last_name'];
     $email = $row['email'];
     $contact_no = $row['contact_no'];
-    if(!$row['profilepicpath'] === NULL){
-      $profilepicpath = "../storage/images/".$row['profilepicpath'];
-    }else{
-      $profilepicpath = "../storage/images/R8.jpg";
-    }
   }
 }
 else
@@ -76,7 +71,7 @@ else
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
+                  <img alt="Your picture" src=<?php echo $_SESSION['profilepic']?>>
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm font-weight-bold"><?php echo $_SESSION['name'];?></span>
@@ -92,7 +87,7 @@ else
                 <span>My profile</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="logout.php" class="dropdown-item">
+              <a href="../logout.php" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -126,7 +121,7 @@ else
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    <img src='.$profilepicpath.' class="rounded-circle">
+                    <img src=<?php echo $_SESSION['profilepic']?> class="rounded-circle">
                   </a>
                 </div>
               </div>

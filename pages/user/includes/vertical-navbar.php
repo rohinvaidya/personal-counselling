@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="score.php">
+                    <a class="nav-link " href="result.php">
                         <i class="ni ni-pin-3 text-orange"></i>Results
                     </a>
                 </li>
