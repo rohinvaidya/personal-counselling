@@ -2,12 +2,11 @@
 
 session_start();
 
-include('../includes/db.php');
+include('../../includes/db.php');
 
 if (isset($_SESSION['id']))
 {  
   $id = $_SESSION['id'];
-  // die($id);
   $query = "SELECT * FROM USER WHERE ID = $id";
   $result = mysqli_query($dbc,$query)
     or die('sql error'.mysqli_error($dbc));
@@ -17,11 +16,6 @@ if (isset($_SESSION['id']))
     $last_name = $row['last_name'];
     $email = $row['email'];
     $contact_no = $row['contact_no'];
-    if(!$row['profilepicpath'] === NULL){
-      $profilepicpath = "../storage/images/".$row['profilepicpath'];
-    }else{
-      $profilepicpath = "../storage/images/R8.jpg";
-    }
   }
 }
 else
@@ -40,28 +34,19 @@ else
     My Profile
   </title>
   <!-- Favicon -->
-  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-  <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="../../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="../../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <link href="../../assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 </head>
 
 <body class="">
   <?php
-    $_POST['profile'] = true;
-    if($role == 'admin'){
-      include('admin/includes/vertical-nav.php');
-    }
-    else if($role  == 'counsellor'){
-      include('counsellor/includes/vertical-navbar.php');
-    }
-    else if ($role == 'client'){
-      include('user/includes/vertical-navbar.php');
-    }
+    include('includes/vertical-navbar.php');
   ?>
   <div class="main-content">
     <!-- Navbar -->
@@ -86,10 +71,10 @@ else
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../assets/img/theme/team-4-800x800.jpg">
+                  <img alt="Your picture" src=<?php echo $_SESSION["profilepic"];?>>
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm font-weight-bold"><?php echo " ".$first_name." ".$last_name;?></span>
+                  <span class="mb-0 text-sm font-weight-bold"><?php echo $_SESSION['name'];?></span>
                 </div>
               </div>
             </a>
@@ -113,7 +98,7 @@ else
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(../assets/project/images/bg-home.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(../../assets/project/images/bg-home.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
@@ -136,14 +121,7 @@ else
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                  <?php
-                    if (isset($profilepicpath)){
-                      echo '<img src='.$profilepicpath.' class="rounded-circle">';
-                    }
-                    else{
-                      echo '<img src="../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">';
-                    }
-                  ?>
+                    <img src=<?php echo $_SESSION['profilepic'];?> class="rounded-circle">';
                   </a>
                 </div>
               </div>
@@ -245,11 +223,11 @@ else
     </div>
   </div>
   <!--   Core   -->
-  <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
   <!--   Argon JS   -->
-  <script src="../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+  <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&

@@ -5,23 +5,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <?php 
-            if(isset($_POST['profile']) && $_POST['profile'] == true){
-                echo '
-                <a class="navbar-brand pt-0" href="counsellor/counsellor.php">
-                    <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-                </a>
-                ';
-                $_POST['profile'] = false;
-            }
-            else{
-                echo '
-                <a class="navbar-brand pt-0" href="counsellor.php">
-                    <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-                </a>
-                ';                
-            }
-        ?>
+        <a class="navbar-brand pt-0" href="counsellor.php">
+            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
@@ -38,17 +24,16 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg
-">
-              </span>
+                        <span class="avatar avatar-sm rounded-circle">
+                            <img alt=<?php echo $_SESSION["name"];?> src= <?php echo $_SESSION["profilepic"];?>>
+                        </span>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">Welcome!</h6>
                     </div>
-                    <a href="../profile.php" class="dropdown-item">
+                    <a href="profile.php" class="dropdown-item">
                         <i class="ni ni-single-02"></i>
                         <span>My profile</span>
                     </a>
@@ -109,10 +94,10 @@
                     <div class="collapse" id="navbar-feedback">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="new-feedback.php" class="nav-link">New Feedback</a>
+                                <a href="feedback.php" class="nav-link">New Feedback</a>
                             </li>
                             <li class="nav-item">
-                                <a href="view-feedback.php" class="nav-link">View Feedback</a>
+                                <a href="view-feedbacks.php" class="nav-link">View Feedback</a>
                             </li>
                         </ul>
                     </div>

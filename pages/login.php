@@ -8,40 +8,47 @@ if(isset($_POST['login']))
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-       $query = "SELECT role from user where email='".$email."' and Password='".$password."'";
-       $query_id = "SELECT id from user where email='".$email."' and Password='".$password."'";
+       $query = "SELECT * from user where email='".$email."' and Password='".$password."'";
 
-       $result_role = mysqli_query($dbc,$query);
-       $result_id = mysqli_query($dbc,$query_id);
-  
-       $query="SELECT role from user where email='$email' and Password='$password'";
-       $query_id="SELECT id from user where email='$email' and Password='$password'";
-       $result_role=mysqli_query($dbc,$query);
-       $result_id=mysqli_query($dbc,$query_id);
+       $result = mysqli_query($dbc,$query);
+       $data = mysqli_fetch_assoc($result); 
 
-       $data=mysqli_fetch_row($result_role);
-       $id_data=mysqli_fetch_assoc($result_id); 
+       $_SESSION['id'] = $data['id'];
+       $_SESSION['name'] = $data['first_name']." ".$data['last_name'];
+       $_SESSION['email'] = $email;
+       $_SESSION['is_registered'] = $data['is_registered'];
+       
+       if (!$data['profilepicpath'] === NULL){
+        $_SESSION['profilepic'] = "../../public/storage/images/".$data['profilepicpath'];
+       }
+       else{
+        $_SESSION['profilepic'] = "../../public/storage/images/bitmoji-20171116103618.png";
+       }
+      //  die($_SESSION['profilepic']);
 
-       $id = $id_data['id'];
-       $_SESSION['id'] = $id;
-
-       if($data[0]== 'admin')
+       if($data['role'] == 'admin')
        {
            header('Location:admin/admin.php');
        }
-       else if($data[0]== 'counsellor')
+       else if($data['role'] == 'counsellor')
        {
-           header('Location:counsellor/counsellor.php');
+         if ($_SESSION['is_registered'] == 0)
+         {
+          header('Location:counsellor/fill-details.php');
+         }
+         else{
+          header('Location:counsellor/counsellor.php');
+         }
        }
 
-       else if($data[0]== 'client') 
+       else if($data['role'] == 'client') 
        {
-           header('Location:user/user-index.php');
+          header('Location:user/user-index.php');
        }
        else
        {
-        //  echo "Error!!";
-          header('Location:error.php');
+          echo "Error!! You have entered the wrong credentials!";
+          // header('Location:error.php');
        }
     }
 ?>

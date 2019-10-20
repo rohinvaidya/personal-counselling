@@ -5,30 +5,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <?php 
-            if(isset($_POST['profile']) && $_POST['profile'] == true){
-                echo '
-                <a class="navbar-brand pt-0" href="user/user-index.php">
-                    <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-                </a>
-                ';
-                $_POST['profile'] = false;
-            }
-            else{
-                echo '
-                <a class="navbar-brand pt-0" href="user-index.php">
-                    <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-                </a>
-                ';                
-            }
-        ?>
+        <a class="navbar-brand pt-0" href="user-index.php">
+            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        </a>
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
             <!-- Collapse header -->
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="../../index.html">
+                        <a href="user-index.php">
                             <img src="../../assets/img/brand/blue.png">
                         </a>
                     </div>
@@ -63,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="result.php">
+                    <a class="nav-link " href="score.php">
                         <i class="ni ni-pin-3 text-orange"></i>Results
                     </a>
                 </li>

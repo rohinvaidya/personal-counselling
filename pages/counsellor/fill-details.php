@@ -1,13 +1,21 @@
 <?php
-
 session_start();
 
-include ("../../includes/db.php");
+include('../../includes/db.php');
 
-if (!isset($_SESSION['id']))
-    header('Location:../error.php');
+if (isset($_SESSION['id']))
+{
 
-$user_id = $_SESSION['id'];
+    $email = $_SESSION['email'];
+    // $is_registered = $_SESSION['is_registered'];
+    if ($_SESSION['is_registered'] == 1){
+        header('Location:counsellor.php');
+    }
+}
+else
+{
+    header('Location:error.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +24,7 @@ $user_id = $_SESSION['id'];
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        View Tests of User
+        Update Your Profile
     </title>
     <!-- Favicon -->
     <link href="../../assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -30,13 +38,15 @@ $user_id = $_SESSION['id'];
 </head>
 
 <body class="">
-<?php include("includes/vertical-navbar.php");?>
+<?php
+    include('includes/vertical-navbar.php');
+?>
 <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">View Users</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="#">Update Your Profile</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -53,11 +63,11 @@ $user_id = $_SESSION['id'];
                 <li class="nav-item dropdown">
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
-                            <span class="avatar avatar-sm rounded-circle">
-                                <img alt="Your picture" src=<?php echo $_SESSION["profilepic"];?>>
-                            </span>
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src=<?php echo $_SESSION['profilepic']?>>
+                </span>
                             <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold"><?php echo $_SESSION["name"]?></span>
+                                <span class="mb-0 text-sm  font-weight-bold"><?php echo $_SESSION['name']?></span>
                             </div>
                         </div>
                     </a>
@@ -90,44 +100,76 @@ $user_id = $_SESSION['id'];
         </div>
     </div>
     <div class="container-fluid mt-5 ">
-
         <!-- Main Content -->
         <div class="card">
             <div class="card-body">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><H2>Submit Your Feedback</h6>
-                </div>
-                <div class="card-body">
-                    <form action="add-feedback-process.php" method="POST">
-                        <!--                    TEXT ARE-->
-                        <div class="row">
-                            <div class="col-md-12 center">
-                                <div class="form-group">
-                                    <textarea name="feedback" required class="form-control"  placeholder="Feedback....!" rows="10"></textarea>
-                                </div>
+                <h2 class="card-title">Update Your Profile<hr></h2>
+            <!--MAIN FORM-->
+                <form action="details.php" method="POST" enctype="multipart/form-data">
+                <!--INPUT IMAGE-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="image">Profile Picture (optional)</label>
+                                <input type="file" class="form-control-file" name= "profilepicpath" value="Choose"/>
                             </div>
                         </div>
-                        <!--                    TEXT ARE-->
-                        <input type="hidden" name="user_id" value="<?php echo $user_id;?>">
-                        <!--SUBMIT BUTTON-->
-                        <div class="row">
-                            <div class="col-md-4 center" >
-                                <div class="form-group">
-                                    <input type="submit" class="form-control btn btn-primary" id="submit" name="submit" value="Submit Feedback" >
-                                </div>
+                    </div>
+                <!--END OF INPUT IMAGE-->
+                <!--NAME-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-alternative" required name="first_name" id="first_name" placeholder="Enter Your First Name">
                             </div>
                         </div>
-                        <!--                    END OF SUBMIT BUTTON-->
-                    </form>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-alternative" required name="last_name" id="last_name" placeholder="Enter Your Last Name">
+                            </div>
+                        </div>
+                    </div>
+                <!--END OF NAME-->
+                <!--CONTACT NUMBER-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" pattern="^[789]\d{9}$" name="contact_no" class="form-control form-control-alternative" required id="contact_no" 
+                                placeholder="Contact Number" data-container="body" data-toggle="popover" data-placement="right" 
+                                data-content="Please enter only 10 digit phone numbers." />
+                            </div>
+                        </div>
+                    </div>
+                <!--END OF CONTACT NUMBER-->
+                <!--EMAILID-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-alternative" required id="email" name="email" value=<?php echo $email;?> disabled>
+                            </div>
+                        </div>
+                    </div>
+                <!--END OF EMAIL-ID-->
+                <!--PASSWORD-->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-alternative" required name="password" placeholder="Password">
+                        </div>
+                    </div>
                 </div>
-
-
+                <!--END OF PASSWORD-->
+                    <div class="row">
+                        <div class="col-md-4 center" >
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" id="name" name="submit" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            <!--END OF FORM-->
             </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- End of Main Content -->
-
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">
@@ -160,17 +202,6 @@ $user_id = $_SESSION['id'];
 <script src="../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!--   Optional JS   -->
-
-
-<!-- Datatables JS  -->
-<!-- Page level plugins -->
-<script src="../../assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="../../assets/js/plugins/datatables/datatables-demo.js"></script>
-
-
 <!--   Argon JS   -->
 <script src="../../assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>

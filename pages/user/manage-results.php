@@ -17,7 +17,7 @@ else
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+        View Results
     </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../images/w.png">
@@ -31,7 +31,8 @@ else
 </head>
 
 <body class="">
-<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+<?php include('includes/vertical-navbar.php');?>
+<!-- <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main"> -->
     <div class="container-fluid">
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,8 +59,7 @@ else
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg
-">
+                <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg">
               </span>
                     </div>
                 </a>
@@ -134,7 +134,7 @@ else
 
         </div>
     </div>
-</nav>
+<!-- </nav> -->
 <div class="main-content">
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
@@ -157,11 +157,11 @@ else
                 <li class="nav-item dropdown">
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
-                </span>
+                            <span class="avatar avatar-sm rounded-circle">
+                                <img alt="Your picture" src=<?php echo $_SESSION["profilepic"];?>>
+                            </span>
                             <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                                <span class="mb-0 text-sm  font-weight-bold"><?php echo $_SESSION["name"]?></span>
                             </div>
                         </div>
                     </a>
@@ -169,24 +169,12 @@ else
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome!</h6>
                         </div>
-                        <a href="../../examples/profile.html" class="dropdown-item">
+                        <a href="profile.php" class="dropdown-item">
                             <i class="ni ni-single-02"></i>
                             <span>My profile</span>
                         </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-settings-gear-65"></i>
-                            <span>Settings</span>
-                        </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-calendar-grid-58"></i>
-                            <span>Activity</span>
-                        </a>
-                        <a href="../../examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-support-16"></i>
-                            <span>Support</span>
-                        </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#!" class="dropdown-item">
+                        <a href="../logout.php" class="dropdown-item">
                             <i class="ni ni-user-run"></i>
                             <span>Logout</span>
                         </a>
