@@ -9,6 +9,8 @@ if (isset($_POST['submit'])){
     // Firing a query
     $result = mysqli_query($dbc,$query)
         or die('sql error'.mysqli_error($dbc));
+
+    header('Location:admin.php');
 }
 else{
     echo "Error in recieving data!";
