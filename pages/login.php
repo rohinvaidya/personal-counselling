@@ -18,11 +18,11 @@ if(isset($_POST['login']))
        $_SESSION['email'] = $email;
        $_SESSION['is_registered'] = $data['is_registered'];
        
-       if (!$data['profilepicpath'] === NULL){
-        $_SESSION['profilepic'] = "../../public/storage/images/".$data['profilepicpath'];
+       if ($data['profilepicpath'] === NULL){
+        $_SESSION['profilepic'] = "../../storage/images/bitmoji-20171116103618.png";
        }
        else{
-        $_SESSION['profilepic'] = "../../public/storage/images/bitmoji-20171116103618.png";
+        $_SESSION['profilepic'] = "../../storage/images/".$data['profilepicpath'];
        }
       //  die($_SESSION['profilepic']);
 
