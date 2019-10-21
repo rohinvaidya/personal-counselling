@@ -1,9 +1,9 @@
 <?php
 include ("../../includes/db.php");
-
-if (isset($_SESSION))
+session_start();
+if (isset($_SESSION['id']))
 {
-    // echo $_SESSION['id'];
+    $is=$_SESSION['id'];
 }
 else
 {

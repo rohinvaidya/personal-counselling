@@ -36,7 +36,7 @@ $user_id = $_SESSION['id'];
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">View Users</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="admin.php">View Feedback</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -91,17 +91,13 @@ $user_id = $_SESSION['id'];
     </div>
     <div class="container-fluid mt-5 ">
 
-        <!-- Main Content -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">View List of Current Users<hr></h2>
-                <h1 class="h3 mb-2 text-gray-800">Test</h1>
+        <!-- Main Content-->
 
 
                 <!-- DataTales Code-->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><H2>User Data</h6>
+                        <h6 class="m-0 font-weight-bold text-primary"><H2>Feedbacks</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

@@ -178,9 +178,6 @@ $count_tests=$count_tests_array['0'];
                             <span class="h2 font-weight-bold mb-0"><?php echo $count_client;?></span>
                         </div>
                     </div>
-                    <p class="mt-3 mb-0 text-muted text-sm">
-                        <span class="text-nowrap"><a href=''><button class="btn btn-primary" type="button">Manage Clients</button></a></span>
-                    </p>
                 </div>
             </div>
 
