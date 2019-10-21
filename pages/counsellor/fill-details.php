@@ -137,7 +137,7 @@ else
                             <div class="form-group">
                                 <input type="text" pattern="^[789]\d{9}$" name="contact_no" class="form-control form-control-alternative" required id="contact_no" 
                                 placeholder="Contact Number" data-container="body" data-toggle="popover" data-placement="right" 
-                                data-content="Please enter only 10 digit phone numbers." />
+                                data-content="Please enter valid phone numbers." />
                             </div>
                         </div>
                     </div>
