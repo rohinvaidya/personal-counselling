@@ -17,6 +17,7 @@ if(isset($_POST['login']))
        $_SESSION['name'] = $data['first_name']." ".$data['last_name'];
        $_SESSION['email'] = $email;
        $_SESSION['is_registered'] = $data['is_registered'];
+       $_SESSION['role'] = $data['role'];
        
        if ($data['profilepicpath'] === NULL){
         $_SESSION['profilepic'] = "../../storage/images/bitmoji-20171116103618.png";
@@ -183,7 +184,7 @@ if(isset($_POST['login']))
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              © 2019 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Convocare</a>
+              © 2019 <a href="../index.php" class="font-weight-bold ml-1" target="_blank">Convocare</a>
             </div>
           </div>
         </div>

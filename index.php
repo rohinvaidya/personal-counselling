@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -115,7 +121,31 @@
                                 <li><a href="#testimonial" class="smooth-scroll">Testimonial</a></li>
                                 <li><a href="#pricing" class="smooth-scroll">Pricing</a></li>
                                 <li><a href="#contact" class="smooth-scroll">Contact</a></li>
-                                <li><a href="pages/login.php">Login/Register</a></li>
+                                <?php
+                                if (!isset($_SESSION['id'])){
+                                    echo 
+                                    '<li><a href="pages/login.php">Login/Register</a></li>';
+                                }
+                                else{
+                                    if($_SESSION['role'] == 'admin')
+                                    {
+                                        echo 
+                                        '<li><a href="pages/admin/admin.php">Dashboard</a></li>';
+                                    }
+                                    else if($_SESSION['role'] == 'counsellor')
+                                    {
+                                        echo 
+                                        '<li><a href="pages/counsellor/counsellor.php">Dashboard</a></li>';
+                                    }
+                                    else if($_SESSION['role'] == 'client') 
+                                    {
+                                        echo 
+                                        '<li><a href="pages/user/user-index.php">Dashboard</a></li>';
+                                    }
+                                    echo 
+                                    '<li><a href="pages/logout.php">Logout</a></li>';
+                                }
+                                ?>
                              </ul>
                         </div>
                     </div>
