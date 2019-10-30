@@ -6,7 +6,7 @@ include ("../../includes/db.php");
 
 if (isset($_SESSION['id']))
 {
-    // die($_SESSION['id']);
+    $id=$_SESSION['id'];
 }
 else
 {

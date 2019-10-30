@@ -109,14 +109,14 @@ if (!isset($_SESSION['id']))
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Name</th>
+                                    <th>View Details</th>
 <!--                                    <th>View Tests of User</th>-->
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>Test Name</th>
+                                    <th>Name</th>
                                     <th>View Details</th>
 <!--                                    <th>View Tests of User</th>-->
                                 </tr>
