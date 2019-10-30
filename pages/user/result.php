@@ -6,7 +6,7 @@ session_start();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+  Test Results
     </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../images/w.png">
