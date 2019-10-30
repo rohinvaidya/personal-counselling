@@ -103,6 +103,7 @@ if (!isset($_SESSION['id']))
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary"><H2>User Data</h6>
+                        <a href='client-profile.php?user_id=<?php echo $student_user_id?>' class='btn btn btn-primary'>Contact Info</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -133,7 +134,7 @@ if (!isset($_SESSION['id']))
 
                                     echo "<tr>";
                                     echo "<td>$test_name</td>";
-                                    echo "<td><a href='view-test-details.php?test_id=$test_id&user_id=$student_user_id' class='btn btn btn-primary'>view details</a></td>";
+                                    echo "<td><a href='view-test-details.php?test_id=$test_id&user_id=$student_user_id' class='btn btn btn-primary'>View Details</a></td>";
                                     echo "</tr>";
                                 }
                                 ?>
