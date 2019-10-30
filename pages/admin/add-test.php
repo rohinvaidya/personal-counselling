@@ -3,7 +3,6 @@
 session_start();
 
 include ("../../includes/db.php");
-
 if (isset($_SESSION['id']))
 {
     $id=$_SESSION['id'];
