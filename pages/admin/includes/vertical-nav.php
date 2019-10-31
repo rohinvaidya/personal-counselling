@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="admin.php">
-            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="../../assets/project/images/Convocare.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -145,7 +145,7 @@
             <ul class="navbar-nav mb-md-3">
                 <li class="nav-item">
                     <a class="nav-link" href="view-feedbacks.php">
-                        <i class="ni ni-spaceship"></i> Feedbackas
+                        <i class="ni ni-spaceship"></i> Feedbacks
                     </a>
             </ul>
         </div>
