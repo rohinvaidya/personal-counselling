@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="user-index.php">
-            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="../../assets/project/images/Convocare.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">

@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="counsellor.php">
-            <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="../../assets/project/images/Convocare.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
