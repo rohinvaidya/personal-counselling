@@ -102,6 +102,11 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="profile.php">
+                        <i class="ni ni-single-02 text-yellow"></i> User Profile
+                    </a>
+                </li>
             </ul>
             <!-- Divider -->
             <hr class="my-3">

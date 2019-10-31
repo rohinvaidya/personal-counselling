@@ -109,7 +109,7 @@ session_start();
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="#home" class="navbar-brand"><img style="height:100%;width:100%;" src="assets/project/images/Convocare.png" alt="Convocare"></img></a>
+                            <a href="index.php" class="navbar-brand"><img style="height:30px;" src="assets/project/images/Convocare.png" alt="Convocare"></img></a>
                         </div>
                         <div class="collapse navbar-collapse" id="wg-menu">
                             <ul class="nav navbar-nav">

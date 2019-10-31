@@ -54,10 +54,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="profile.php">
+                        <i class="ni ni-single-02 text-yellow"></i> User Profile
+                    </a>
+                </li>
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="chat.php">
                         <i class="ni ni-single-02 text-yellow"></i>Chat
                     </a>
-                </li>
+                </li> -->
             </ul>
             <!-- Divider -->
             
